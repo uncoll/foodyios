@@ -1,0 +1,96 @@
+name: Label bench (impl)
+
+on:
+  workflow_call:
+    inputs:
+      stage:
+        type: string
+        required: true
+      openai_models:
+        type: string
+        default: ""
+      anthropic_models:
+        type: string
+        default: ""
+      limit:
+        type: string
+        default: "0"
+      effort:
+        type: string
+        default: "low"
+    secrets:
+      OPENAI_API_KEY:
+        required: false
+      ANTHROPIC_API_KEY:
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r tools/label-bench/requirements.txt
+
+      - name: Fetch dataset from Open Food Facts
+        if: inputs.stage == 'dataset' || inputs.stage == 'all'
+        run: python tools/label-bench/fetch_dataset.py
+
+      - name: Pricing pages snapshot
+        if: inputs.stage != 'score'
+        run: python tools/label-bench/fetch_pricing.py || true
+
+      - name: Run OpenAI models
+        if: inputs.stage == 'openai' || inputs.stage == 'all'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          MODELS: ${{ inputs.openai_models }}
+          LIMIT: ${{ inputs.limit }}
+          EFFORT: ${{ inputs.effort }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then echo "OpenAI key not provided, skipping"; exit 0; fi
+          python tools/label-bench/run_models.py --provider openai --models "$MODELS" --limit "$LIMIT" --effort "$EFFORT"
+
+      - name: Run Anthropic models
+        if: inputs.stage == 'anthropic' || inputs.stage == 'all'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MODELS: ${{ inputs.anthropic_models }}
+          LIMIT: ${{ inputs.limit }}
+          EFFORT: ${{ inputs.effort }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then echo "Anthropic key not provided, skipping"; exit 0; fi
+          python tools/label-bench/run_models.py --provider anthropic --models "$MODELS" --limit "$LIMIT" --effort "$EFFORT"
+
+      - name: Score
+        run: python tools/label-bench/score.py || true
+
+      - name: Commit dataset and results
+        run: |
+          git config user.name "label-bench[bot]"
+          git config user.email "label-bench@users.noreply.github.com"
+          git add -A tools/label-bench/data tools/label-bench/results
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "bench: update dataset/results (stage=${{ inputs.stage }})"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: label-bench-results
+          path: |
+            tools/label-bench/results
+            tools/label-bench/data
+          if-no-files-found: ignore

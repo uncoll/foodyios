@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "product_name", "brand", "basis", "serving_size_g", "serving_description",
+    "energy_kcal", "energy_kj",
+    "fat_g", "saturated_fat_g", "monounsaturated_fat_g", "polyunsaturated_fat_g", "trans_fat_g", "cholesterol_mg",
+    "carbohydrates_g", "sugars_g", "polyols_g", "starch_g", "fiber_g",
+    "protein_g", "salt_g", "sodium_mg", "alcohol_g",
+    "micronutrients", "label_language", "values_source", "notes", "confidence"
+  ],
+  "properties": {
+    "product_name": { "anyOf": [ { "type": "string" }, { "type": "null" } ], "description": "Product name if visible in the photo, else null" },
+    "brand": { "anyOf": [ { "type": "string" }, { "type": "null" } ], "description": "Brand if visible, else null" },
+    "basis": { "type": "string", "enum": [ "per_100g", "per_100ml" ], "description": "Whether the values are per 100 g or per 100 ml" },
+    "serving_size_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ], "description": "Stated serving/portion size in g or ml, number only" },
+    "serving_description": { "anyOf": [ { "type": "string" }, { "type": "null" } ], "description": "Serving as printed, e.g. '1 portion (30 g)'" },
+    "energy_kcal": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "energy_kj": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "fat_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "saturated_fat_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "monounsaturated_fat_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "polyunsaturated_fat_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "trans_fat_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "cholesterol_mg": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "carbohydrates_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "sugars_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "polyols_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "starch_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "fiber_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "protein_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "salt_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "sodium_mg": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "alcohol_g": { "anyOf": [ { "type": "number" }, { "type": "null" } ] },
+    "micronutrients": {
+      "type": "array",
+      "description": "Vitamins and minerals rows as printed",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [ "name", "amount", "unit" ],
+        "properties": {
+          "name": { "type": "string", "description": "English lowercase snake_case, e.g. vitamin_c, calcium, iron" },
+          "amount": { "type": "number" },
+          "unit": { "type": "string", "description": "Unit as printed: mg, µg, g" }
+        }
+      }
+    },
+    "label_language": { "anyOf": [ { "type": "string" }, { "type": "null" } ], "description": "ISO 639-1 code of the label language, e.g. de, fr, ru" },
+    "values_source": { "type": "string", "enum": [ "per_100_column", "converted_from_serving", "unclear" ] },
+    "notes": { "anyOf": [ { "type": "string" }, { "type": "null" } ], "description": "Short English notes about doubts, '<0.5' values, conversions" },
+    "confidence": { "type": "string", "enum": [ "high", "medium", "low" ] }
+  }
+}

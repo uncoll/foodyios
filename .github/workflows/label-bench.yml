@@ -1,0 +1,52 @@
+name: Label parsing benchmark
+
+# Запуск вручную из вкладки Actions. API-ключи передаются во вложенный workflow как секреты,
+# поэтому в логах они маскируются. Результаты коммитятся в ветку (tools/label-bench/data, results).
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "Что запускать"
+        type: choice
+        default: all
+        options: [dataset, openai, anthropic, score, all]
+      openai_models:
+        description: "Модели OpenAI через запятую (пусто = автообнаружение)"
+        type: string
+        default: ""
+      anthropic_models:
+        description: "Модели Anthropic через запятую (пусто = набор по умолчанию)"
+        type: string
+        default: ""
+      limit:
+        description: "Максимум фото на модель (0 = все)"
+        type: string
+        default: "0"
+      effort:
+        description: "reasoning effort для reasoning-моделей (low/medium/high; пусто = по умолчанию)"
+        type: string
+        default: "low"
+      openai_api_key:
+        description: "OpenAI API key (пусто = пропустить OpenAI)"
+        type: string
+        default: ""
+      anthropic_api_key:
+        description: "Anthropic API key (пусто = пропустить Anthropic)"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  bench:
+    uses: ./.github/workflows/label-bench-impl.yml
+    with:
+      stage: ${{ inputs.stage }}
+      openai_models: ${{ inputs.openai_models }}
+      anthropic_models: ${{ inputs.anthropic_models }}
+      limit: ${{ inputs.limit }}
+      effort: ${{ inputs.effort }}
+    secrets:
+      OPENAI_API_KEY: ${{ inputs.openai_api_key }}
+      ANTHROPIC_API_KEY: ${{ inputs.anthropic_api_key }}
