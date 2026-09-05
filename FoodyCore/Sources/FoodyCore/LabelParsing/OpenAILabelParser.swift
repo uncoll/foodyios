@@ -50,10 +50,11 @@ public struct OpenAILabelParser: LabelParsing {
         var refusal: String? = nil
         for item in (obj["output"] as? [[String: Any]]) ?? [] where (item["type"] as? String) == "message" {
             for part in (item["content"] as? [[String: Any]]) ?? [] {
-                switch part["type"] as? String {
-                case "output_text": text = part["text"] as? String
-                case "refusal": refusal = part["refusal"] as? String
-                default: break
+                let partType = (part["type"] as? String) ?? ""
+                if partType == "output_text" {
+                    text = part["text"] as? String
+                } else if partType == "refusal" {
+                    refusal = part["refusal"] as? String
                 }
             }
         }

@@ -46,10 +46,11 @@ struct LabelScanFlowView: View {
         .onChange(of: photoItem) { _, item in
             guard let item else { return }
             Task {
-                if let data = try? await item.loadTransferable(type: Data.self), let picked = UIImage(data: data) {
-                    await MainActor.run { start(with: picked) }
+                let data = try? await item.loadTransferable(type: Data.self)
+                await MainActor.run {
+                    photoItem = nil
+                    if let data, let picked = UIImage(data: data) { start(with: picked) }
                 }
-                photoItem = nil
             }
         }
         .alert("Не удалось распознать", isPresented: Binding(get: { errorMessage != nil }, set: { if !$0 { errorMessage = nil } })) {
