@@ -1,0 +1,1208 @@
+{
+  "anthropic-agent/claude-fable-5-1": {
+    "r01_en_cookies": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "UK-style table with per 100g and per serving (2 cookies, 21g) columns; per 100g column used. Product name/brand not visible.",
+      "latency_s": null
+    },
+    "r02_us_cranberry": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "converted_from_serving",
+      "basis": "per_100ml",
+      "notes": "US Nutrition Facts, per serving only (8 fl oz = 240 mL): 110 kcal, 0 g fat, 15 mg sodium, 190 mg potassium, 28 g carbohydrate, 28 g sugars, 0 g protein; converted to per 100 ml. Vitamin C 100%, phosphorus 2%, magnesium 2% given only as %DV, not included. 'Not a significant source of saturated fat, trans fat, cholesterol, dietary fiber' - left null. 'Ocean' visible on an adjacent bottle, brand not on this label.",
+      "latency_s": null
+    },
+    "r03_us_orange_nosize": {
+      "verdicts": {},
+      "confidence": "low",
+      "values_source": "unclear",
+      "basis": "per_100ml",
+      "notes": "US Nutrition Facts with per-serving values only; serving size is '1 Bottle' with no g/ml stated, so no conversion to per 100 ml is possible. Printed per serving: 140 kcal, total fat 0 g, sodium 20 mg, total carbohydrate 33 g, total sugars 28 g (0 g added sugars), protein 2 g, vit. D 0 mcg, calcium 0 mg, potassium 560 mg, vit. C 60 mg. Brand 'Tropicana' read from manufacturer text on the side of the label; '100% Juice' printed.",
+      "latency_s": null
+    },
+    "r04_us_bread": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "converted_from_serving",
+      "basis": "per_100g",
+      "notes": "US Nutrition Facts per serving (1 slice, 28 g): 70 kcal, total fat 1.5 g, saturated fat 0 g, trans fat 0 g, cholesterol 0 mg, sodium 115 mg, potassium 75 mg, total carbohydrate 13 g, dietary fiber 3 g, sugars 2 g, protein 3 g; converted to per 100 g (x100/28). Vitamins/minerals printed only as %DV, not included. Brand read from daveskillerbread.com on the pack.",
+      "latency_s": null
+    },
+    "s01_de_oats": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "German 'Nährwerte' table, single 'pro 100 g' column. Salt printed as '<0,01 g' - upper bound 0.01 reported. No product name, brand or serving size visible.",
+      "latency_s": null
+    },
+    "s02_fr_biscuits": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "French table with 'pour 100 g', 'par biscuit (12,5 g)' and %AR columns; per 100 g column used. Rows are slightly skewed in the photo but readable. No product name or brand visible.",
+      "latency_s": null
+    },
+    "s03_it_drink": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "Italian 'Dichiarazione nutrizionale', single 'per 100 ml' column. No fibre row printed. No product name, brand or serving size visible.",
+      "latency_s": null
+    },
+    "s04_es_yogur": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Spanish 'Información nutricional' with 'por 100 g' and 'por envase (125 g)' columns; per 100 g column used. No fibre row printed. No product name or brand visible.",
+      "latency_s": null
+    },
+    "s05_pl_bread": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "medium",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Polish 'Wartość odżywcza' table, single 'w 100 g' column. Photo is small and slightly blurry, so digits (e.g. 1,8 / 0,4 / 3,2 / 6,1 / 8,5) were read with some uncertainty. No product name, brand or serving size visible.",
+      "latency_s": null
+    },
+    "s06_nl_pindakaas": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Dutch 'Voedingswaarde' table, single 'per 100 g' column, includes mono- and polyunsaturated fat rows. Table is skewed in the photo; values were matched to rows by order (10 rows, 10 values). No product name, brand or serving size visible.",
+      "latency_s": null
+    },
+    "s07_cs_cheese": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Czech 'Výživové údaje' table, single 've 100 g' column. No fibre row printed. No product name, brand or serving size visible.",
+      "latency_s": null
+    },
+    "s08_ru_inline": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Russian inline text 'Пищевая ценность в 100 г продукта': белки 7,5 г, жиры 18,0 г, углеводы 66,0 г; энергетическая ценность 456 ккал / 1910 кДж. No saturates, sugars, fibre or salt printed. Ingredients list follows; no product name or brand visible.",
+      "latency_s": null
+    },
+    "s09_ru_table": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Russian table 'Пищевая ценность на 100 г продукта' (protein listed before fat, as usual in RU labels): белки 11,0 г, жиры 6,5 г (насыщенные 1,2 г), углеводы 60,0 г (сахара 1,0 г), пищевые волокна 9,0 г, соль 0,02 г; 1470 кДж / 350 ккал. No product name, brand or serving size visible.",
+      "latency_s": null
+    },
+    "s10_en_cereal": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "UK-style 'Typical values' table with 'per 100 g', 'per 30 g serving' and RI columns; per 100 g column used, including vitamin/mineral rows (thiamin = vitamin B1, riboflavin = vitamin B2). No product name or brand visible.",
+      "latency_s": null
+    },
+    "s11_de_chocolate": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "German 'Nährwertangaben' with 'je 100 g' and 'je Portion (25 g)' columns; per 100 g column used. No fibre row printed. Slightly grainy photo but all digits legible. No product name or brand visible.",
+      "latency_s": null
+    },
+    "s12_fr_soup_hard": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "wrong: got 0.8 want 0.6"
+      },
+      "confidence": "low",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "French 'Valeurs nutritionnelles' table, single 'pour 100 ml' column. Photo is blurry, low-resolution and skewed; values matched to the 8 rows by order (energy, fat, saturates, carbohydrate, sugars, fibre, protein, salt). Digits read as 143 kJ / 34 kcal, 1,1 / 0,2 / 5,0 / 2,4 / 0,9 / 1,0 / 0,8 g but each digit is uncertain (e.g. 143 vs 148 kJ, 0,9 vs 0,8 g fibre). No product name or brand visible.",
+      "latency_s": null
+    },
+    "s13_it_pasta": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Italian 'Valori medi' table with 'per 100 g' and 'per porzione (80 g)' columns; per 100 g column used. Table is skewed in the photo but all digits legible. No product name or brand visible.",
+      "latency_s": null
+    },
+    "s14_es_oil": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "Spanish 'Información nutricional' table, single 'por 100 ml' column, with saturated, monounsaturated and polyunsaturated fat rows (14 + 69 + 8,6 = 91,6 g). No fibre row printed. No product name, brand or serving size visible.",
+      "latency_s": null
+    }
+  },
+  "anthropic-agent/claude-haiku-4-5": {
+    "r01_en_cookies": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "r02_us_cranberry": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "hallucinated: got 191.81 want absent",
+        "fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "converted_from_serving",
+      "basis": "per_100ml",
+      "notes": "Converted from per-serving values; original serving size 240mL",
+      "latency_s": null
+    },
+    "r03_us_orange_nosize": {
+      "verdicts": {},
+      "confidence": "medium",
+      "values_source": "unclear",
+      "basis": "per_100ml",
+      "notes": "Serving size is stated as 1 Bottle but bottle volume in ml/oz is not visible in image",
+      "latency_s": null
+    },
+    "r04_us_bread": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "hallucinated: got 1045 want absent",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "converted_from_serving",
+      "basis": "per_100g",
+      "notes": "Converted from per-serving values; serving size 28g",
+      "latency_s": null
+    },
+    "s01_de_oats": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Salt value printed as <0.01g; upper bound reported",
+      "latency_s": null
+    },
+    "s02_fr_biscuits": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s03_it_drink": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": null,
+      "latency_s": null
+    },
+    "s04_es_yogur": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s05_pl_bread": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "wrong: got 4.1 want 6.1",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "medium",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Image quality is poor; some digits difficult to read with certainty",
+      "latency_s": null
+    },
+    "s06_nl_pindakaas": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s07_cs_cheese": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s08_ru_inline": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Only main macronutrients listed; no fiber, salt, or micronutrient information",
+      "latency_s": null
+    },
+    "s09_ru_table": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s10_en_cereal": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s11_de_chocolate": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s12_fr_soup_hard": {
+      "verdicts": {
+        "energy_kcal": "wrong: got 41 want 34",
+        "energy_kj": "wrong: got 169 want 143",
+        "fat_g": "correct",
+        "saturated_fat_g": "wrong: got 0.1 want 0.2",
+        "carbohydrates_g": "wrong: got 6.2 want 5.0",
+        "sugars_g": "wrong: got 4.1 want 2.4",
+        "fiber_g": "wrong: got 0.1 want 0.9",
+        "protein_g": "wrong: got 1.3 want 1.0",
+        "salt_g": "wrong: got 0.5 want 0.6"
+      },
+      "confidence": "low",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "Image is very blurry; digit values are uncertain and based on best interpretation of character shapes",
+      "latency_s": null
+    },
+    "s13_it_pasta": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s14_es_oil": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": null,
+      "latency_s": null
+    }
+  },
+  "anthropic-agent/claude-opus-5": {
+    "r01_en_cookies": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Per 100g column used; per-serving column (2 cookies, 21 g) and % RI ignored.",
+      "latency_s": null
+    },
+    "r02_us_cranberry": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "converted_from_serving",
+      "basis": "per_100ml",
+      "notes": "US Nutrition Facts, only per-serving values; converted from 240 mL serving (x100/240). Vitamin C 100%, phosphorus 2%, magnesium 2% given only as %DV, so omitted. Label states not a significant source of saturated fat, trans fat, cholesterol, dietary fiber.",
+      "latency_s": null
+    },
+    "r03_us_orange_nosize": {
+      "verdicts": {},
+      "confidence": "medium",
+      "values_source": "unclear",
+      "basis": "per_100ml",
+      "notes": "Only per-serving values and the serving size is '1 Bottle' with no g/ml stated, so no conversion to per 100 is possible. Printed per bottle: 140 kcal, fat 0 g, sodium 20 mg, carbohydrate 33 g, sugars 28 g (0 g added), protein 2 g, potassium 560 mg, vitamin C 60 mg.",
+      "latency_s": null
+    },
+    "r04_us_bread": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "converted_from_serving",
+      "basis": "per_100g",
+      "notes": "US Nutrition Facts with only per-serving values; converted from 1 slice (28 g) by x100/28. Vitamin/mineral rows are given only as %DV so they are omitted; only potassium had a mg amount. Website text 'daveskillerbread.com' visible but brand name not printed in the visible area.",
+      "latency_s": null
+    },
+    "s01_de_oats": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Salt printed as '<0,01 g'; upper bound 0.01 reported.",
+      "latency_s": null
+    },
+    "s02_fr_biscuits": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Table rows are printed slightly offset from their labels; per 100 g column used, per-biscuit (12,5 g) and %AR columns ignored. Values cross-check with the per-biscuit column.",
+      "latency_s": null
+    },
+    "s03_it_drink": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": null,
+      "latency_s": null
+    },
+    "s04_es_yogur": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Per 100 g column used; per-envase (125 g) column ignored. Row values printed slightly offset from labels but cross-check with the 125 g column.",
+      "latency_s": null
+    },
+    "s05_pl_bread": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "medium",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Small, low-resolution photo; values printed offset below their row labels but all rows legible.",
+      "latency_s": null
+    },
+    "s06_nl_pindakaas": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Values are printed one line above their row labels; alignment confirmed by the energy calculation and by mono+poly+saturated matching total fat.",
+      "latency_s": null
+    },
+    "s07_cs_cheese": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s08_ru_inline": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Inline Russian declaration per 100 g: protein 7,5 g, fat 18,0 g, carbohydrates 66,0 g, energy 456 kcal / 1910 kJ. No saturates, sugars, fibre or salt printed.",
+      "latency_s": null
+    },
+    "s09_ru_table": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Values printed offset below their row labels; row order Energy / protein / fat / of which saturates / carbohydrates / of which sugars / fibre / salt.",
+      "latency_s": null
+    },
+    "s10_en_cereal": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Per 100 g column used; per 30 g serving and RI% columns ignored. All rows cross-check against the 30 g column.",
+      "latency_s": null
+    },
+    "s11_de_chocolate": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Per 100 g column used; per portion (25 g) column ignored. No fibre row printed.",
+      "latency_s": null
+    },
+    "s12_fr_soup_hard": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "low",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "Photo is blurry and low resolution; values are printed offset below their labels. Salt digit uncertain (read as 0,6 g, could be 0,8 g); energy read as 143 kJ / 34 kcal.",
+      "latency_s": null
+    },
+    "s13_it_pasta": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Values printed one line above their row labels; per 100 g column used and confirmed against the per porzione (80 g) column.",
+      "latency_s": null
+    },
+    "s14_es_oil": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": null,
+      "latency_s": null
+    }
+  },
+  "anthropic-agent/claude-sonnet-5": {
+    "r01_en_cookies": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "r02_us_cranberry": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "converted_from_serving",
+      "basis": "per_100ml",
+      "notes": "Only per-serving values printed (Serving Size 8 fl oz/240mL); converted to per 100mL. Vitamin C 100%, Phosphorus 2%, Magnesium 2% printed only as %DV with no absolute amount, so omitted from micronutrients.",
+      "latency_s": null
+    },
+    "r03_us_orange_nosize": {
+      "verdicts": {},
+      "confidence": "medium",
+      "values_source": "unclear",
+      "basis": "per_100ml",
+      "notes": "Serving size stated only as '1 Bottle' with no gram/ml amount, so per-100 values cannot be computed; all nutrient values set to null per instructions. Per-serving values printed: Calories 140, Total Fat 0g, Sodium 20mg, Total Carbohydrate 33g, Total Sugars 28g (0g added), Protein 2g, Vit D 0mcg, Calcium 0mg, Potassium 560mg, Vit C 60mg.",
+      "latency_s": null
+    },
+    "r04_us_bread": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "converted_from_serving",
+      "basis": "per_100g",
+      "notes": "Only per-serving values printed (Serving Size 1 slice, 28g); converted to per 100g. Vitamin A, C, Calcium, Iron, Thiamin, Riboflavin, Niacin, Folic Acid, Vitamin B6, Vitamin E, Vitamin K, Zinc, Manganese, Copper, Phosphorus, Selenium, Magnesium, Pantothenic Acid were printed only as %DV with no absolute amount, so omitted from micronutrients.",
+      "latency_s": null
+    },
+    "s01_de_oats": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Salt printed as '<0,01 g'; numeric upper bound 0.01 used.",
+      "latency_s": null
+    },
+    "s02_fr_biscuits": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "medium",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Photo taken at a skewed angle so the 'pour 100 g' and 'par biscuit' columns are visually staggered relative to row labels; values were cross-checked against the stated 12.5g/100g ratio (all rows consistent) before assignment.",
+      "latency_s": null
+    },
+    "s03_it_drink": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": null,
+      "latency_s": null
+    },
+    "s04_es_yogur": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s05_pl_bread": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "medium",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Image is slightly blurry/low resolution, small text, but digits were legible on repeated inspection.",
+      "latency_s": null
+    },
+    "s06_nl_pindakaas": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "medium",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Photo is rotated/skewed, so row labels and values are visually staggered. Row assignment was resolved using unit matching (only one value carries kJ/kcal units, matching 'Energie') and sequential order for the remaining gram values.",
+      "latency_s": null
+    },
+    "s07_cs_cheese": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s08_ru_inline": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "protein_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Nutrition declared as inline text (not a table): 'Пищевая ценность в 100 г продукта: белки - 7,5 г, жиры - 18,0 г, углеводы - 66,0 г. Энергетическая ценность - 456 ккал / 1910 кДж.' No saturated fat, sugars, fibre or salt figures printed.",
+      "latency_s": null
+    },
+    "s09_ru_table": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s10_en_cereal": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Photo taken at an angle; per-100g and per-30g columns cross-checked against the stated 30/100 ratio for every row (all consistent) before assignment.",
+      "latency_s": null
+    },
+    "s11_de_chocolate": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "s12_fr_soup_hard": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "wrong: got 0.8 want 0.6"
+      },
+      "confidence": "low",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "Image is blurry and shot at an angle, digits hard to confirm with full certainty (especially the last row 'Sel', read as 0,8 g but could be 0,6 g). Reading cross-checked via energy math (1.1g fat*9 + 5.0g carbs*4 + 1.0g protein*4 ≈ 34 kcal), which matches the printed energy value.",
+      "latency_s": null
+    },
+    "s13_it_pasta": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Photo taken at an angle; per-100g and per-porzione (80g) columns cross-checked against the stated 80/100 ratio for every row (all consistent) before assignment.",
+      "latency_s": null
+    },
+    "s14_es_oil": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": null,
+      "latency_s": null
+    }
+  }
+}

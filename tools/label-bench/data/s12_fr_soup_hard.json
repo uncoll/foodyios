@@ -1,0 +1,46 @@
+{
+  "id": "s12_fr_soup_hard",
+  "code": null,
+  "product_name": "Soupe",
+  "brands": null,
+  "country": "fr",
+  "lang": "fr",
+  "basis": "per_100ml",
+  "synthetic": true,
+  "serving_size": null,
+  "off_url": null,
+  "image_url": null,
+  "original_size": [
+    960,
+    516
+  ],
+  "stored_size": [
+    747,
+    495
+  ],
+  "license": "synthetic label rendered for this benchmark (CC0)",
+  "degrade": {
+    "perspective": 0.06,
+    "rotate": -3,
+    "blur": 1.9,
+    "noise": 12,
+    "jpeg": 45,
+    "scale": 0.6,
+    "shade": 0.5
+  },
+  "truth": {
+    "energy_kcal": 34,
+    "energy_kj": 143,
+    "fat_g": 1.1,
+    "saturated_fat_g": 0.2,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 5.0,
+    "sugars_g": 2.4,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": 0.9,
+    "protein_g": 1.0,
+    "salt_g": 0.6
+  }
+}

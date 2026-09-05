@@ -21,12 +21,14 @@ SHORT = {"energy_kcal": "ккал", "energy_kj": "кДж", "fat_g": "жиры", 
          "carbohydrates_g": "углев.", "sugars_g": "сахара", "fiber_g": "клетч.", "protein_g": "белки", "salt_g": "соль"}
 
 
-def tolerance(field, truth):
+def tolerance(field, truth, converted=False):
     if field == "energy_kcal":
-        return max(1.0, 0.01 * truth)
-    if field == "energy_kj":
-        return max(2.0, 0.01 * truth)
-    return 0.051 + 0.005 * truth
+        t = max(1.0, 0.01 * truth)
+    elif field == "energy_kj":
+        t = max(2.0, 0.01 * truth)
+    else:
+        t = 0.051 + 0.005 * truth
+    return max(t * 4, 0.5) if converted else t   # пересчёт из порции: допускаем округления модели
 
 
 def load_truth():
@@ -35,17 +37,29 @@ def load_truth():
     p = HERE / "truth_overrides.json"
     if p.exists():
         overrides.update(json.loads(p.read_text(encoding="utf-8")))
-    truth = {}
+    truth, flags = {}, {}
     for m in manifest:
         if m["id"] in overrides["exclude"]:
             continue
         t = dict(m["truth"])
         t.update((overrides["images"].get(m["id"]) or {}).get("truth", {}))
         truth[m["id"]] = t
-    return truth, overrides
+        flags[m["id"]] = {"converted": bool(m.get("converted")), "size": m.get("stored_size") or [1200, 900]}
+    return truth, overrides, flags
 
 
-def judge(field, tv, pv):
+PROMPT_TOKENS_EST = 700      # инструкция + схема
+OUTPUT_TOKENS_EST = 350
+
+
+def estimate_usage(size):
+    """Для прогонов без данных usage (субагенты): токены изображения по формуле Anthropic (w*h/750, длинная сторона <=1568)."""
+    w, h = size
+    k = min(1.0, 1568 / max(w, h))
+    return {"input_tokens": int(w * k * h * k / 750) + PROMPT_TOKENS_EST, "output_tokens": OUTPUT_TOKENS_EST, "estimated": True}
+
+
+def judge(field, tv, pv, converted=False):
     """-> 'correct' | 'wrong' | 'missing' | 'hallucinated' | None (не оценивается)."""
     if tv is None or tv == "skip":
         return None
@@ -58,13 +72,14 @@ def judge(field, tv, pv):
     if pv is None:
         return "missing"
     try:
-        return "correct" if abs(float(pv) - float(tv)) <= tolerance(field, float(tv)) else "wrong"
+        return "correct" if abs(float(pv) - float(tv)) <= tolerance(field, float(tv), converted) else "wrong"
     except (TypeError, ValueError):
         return "wrong"
 
 
 def main():
-    truth, overrides = load_truth()
+    truth, overrides, flags = load_truth()
+    RESULTS.mkdir(exist_ok=True)
     pricing = json.loads((HERE / "pricing.json").read_text(encoding="utf-8")) if (HERE / "pricing.json").exists() else {}
     rows = []
     details = {}
@@ -78,15 +93,19 @@ def main():
             outcomes = defaultdict(int)
             full_ok = 0
             lat, tin, tout, treason = [], [], [], []
-            errors = 0
+            errors, estimated = 0, False
             img_details = {}
             for r in recs:
                 if not r.get("ok"):
                     errors += 1
                     img_details[r["image_id"]] = {"error": r.get("error")}
                     continue
-                lat.append(r["latency_s"])
+                if r.get("latency_s") is not None:
+                    lat.append(r["latency_s"])
                 u = r.get("usage") or {}
+                if u.get("input_tokens") is None and pricing.get(model_dir.name):
+                    u = estimate_usage(flags[r["image_id"]]["size"])
+                    estimated = True
                 if u.get("input_tokens") is not None:
                     tin.append(u["input_tokens"])
                     tout.append(u.get("output_tokens") or 0)
@@ -95,7 +114,7 @@ def main():
                 t = truth[r["image_id"]]
                 all_ok, verdicts = True, {}
                 for f in FIELDS:
-                    v = judge(f, t.get(f), p.get(f))
+                    v = judge(f, t.get(f), p.get(f), flags[r["image_id"]]["converted"])
                     if v is None:
                         continue
                     per_field[f][v] += 1
@@ -107,7 +126,7 @@ def main():
                     full_ok += 1
                 img_details[r["image_id"]] = {"verdicts": verdicts, "confidence": p.get("confidence"),
                                               "values_source": p.get("values_source"), "basis": p.get("basis"),
-                                              "notes": p.get("notes"), "latency_s": r["latency_s"]}
+                                              "notes": p.get("notes"), "latency_s": r.get("latency_s")}
             scored = sum(outcomes.values())
             n_ok = len(recs) - errors
             price = pricing.get(model_dir.name) or {}
@@ -129,6 +148,7 @@ def main():
                 "reasoning_tokens_mean": statistics.mean(treason) if treason else None,
                 "cost_per_image_usd": cost,
                 "cost_per_1000_usd": cost * 1000 if cost is not None else None,
+                "cost_estimated": estimated,
                 "per_field_accuracy": {f: (per_field[f]["correct"] / sum(per_field[f].values())) if sum(per_field[f].values()) else None for f in FIELDS},
                 "effort": next((r.get("effort") for r in recs if r.get("effort")), None),
             }
@@ -152,7 +172,9 @@ def main():
             f"| {r['model']}{' (effort='+r['effort']+')' if r['effort'] else ''} | {fmt(r['accuracy'], '.1%')} | "
             f"{r['fully_correct_images']}/{r['images'] - r['api_errors']} | {r['wrong']} / {r['missing']} / {r['hallucinated']} | "
             f"{fmt(r['latency_median_s'], '.1f')} | {fmt(r['input_tokens_mean'], '.0f')} / {fmt(r['output_tokens_mean'], '.0f')} | "
-            f"{fmt(r['cost_per_image_usd'], '.4f')} | {fmt(r['cost_per_1000_usd'], '.2f')} |")
+            f"{fmt(r['cost_per_image_usd'], '.4f')}{'*' if r['cost_estimated'] else ''} | {fmt(r['cost_per_1000_usd'], '.2f')}{'*' if r['cost_estimated'] else ''} |")
+    if any(r["cost_estimated"] for r in rows):
+        lines += ["", "\\* стоимость оценена по размеру изображения (формула токенов Anthropic) и типичной длине ответа — прогон шёл не через API, а через субагентов."]
     lines += ["", "## Точность по полям", "", "| Модель | " + " | ".join(SHORT[f] for f in FIELDS) + " |",
               "|---|" + "---|" * len(FIELDS)]
     for r in rows:

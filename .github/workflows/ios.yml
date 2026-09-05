@@ -1,0 +1,74 @@
+name: iOS build
+
+on:
+  push:
+    paths:
+      - "Foody/**"
+      - "FoodyCore/**"
+      - "Foody.xcodeproj/**"
+      - ".github/workflows/ios.yml"
+  workflow_dispatch:
+
+jobs:
+  core-tests-linux:
+    name: FoodyCore tests (Linux)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift version
+        run: swift --version
+      - name: Test
+        run: swift test --package-path FoodyCore 2>&1 | tail -80
+
+  ios-build:
+    name: Build app (Xcode)
+    runs-on: macos-15
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode 16.4
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app && xcodebuild -version
+
+      - name: FoodyCore tests (macOS)
+        run: swift test --package-path FoodyCore 2>&1 | tail -60
+
+      - name: Build for iOS Simulator
+        run: |
+          set -o pipefail
+          xcodebuild -project Foody.xcodeproj -scheme Foody -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build/sim.log | grep -E "error:|warning: unre|BUILD (SUCCEEDED|FAILED)" || true
+          grep -q "BUILD SUCCEEDED" build/sim.log
+
+      - name: Show errors (if any)
+        if: failure()
+        run: grep -E "error:" -A3 build/sim.log | head -200 || true
+
+      - name: Archive unsigned for device
+        run: |
+          set -o pipefail
+          xcodebuild -project Foody.xcodeproj -scheme Foody -configuration Release \
+            -destination 'generic/platform=iOS' -archivePath build/Foody.xcarchive -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" archive 2>&1 | tee build/archive.log | grep -E "error:|ARCHIVE (SUCCEEDED|FAILED)" || true
+          grep -q "ARCHIVE SUCCEEDED" build/archive.log
+
+      - name: Package IPA (unsigned)
+        run: |
+          mkdir -p build/Payload
+          cp -R build/Foody.xcarchive/Products/Applications/Foody.app build/Payload/
+          (cd build && zip -qr Foody-unsigned.ipa Payload)
+          ls -la build/Foody-unsigned.ipa
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Foody-unsigned-ipa
+          path: build/Foody-unsigned.ipa
+          if-no-files-found: error
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-logs
+          path: build/*.log
+          if-no-files-found: ignore

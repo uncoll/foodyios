@@ -1,0 +1,46 @@
+{
+  "id": "s02_fr_biscuits",
+  "code": null,
+  "product_name": "Biscuits",
+  "brands": null,
+  "country": "fr",
+  "lang": "fr",
+  "basis": "per_100g",
+  "synthetic": true,
+  "serving_size": 12.5,
+  "off_url": null,
+  "image_url": null,
+  "original_size": [
+    1360,
+    556
+  ],
+  "stored_size": [
+    1417,
+    783
+  ],
+  "license": "synthetic label rendered for this benchmark (CC0)",
+  "degrade": {
+    "perspective": 0.03,
+    "rotate": -4,
+    "blur": 0.7,
+    "noise": 5,
+    "jpeg": 75,
+    "scale": 0.85,
+    "shade": 0.5
+  },
+  "truth": {
+    "energy_kcal": 473,
+    "energy_kj": 1985,
+    "fat_g": 17,
+    "saturated_fat_g": 8.2,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 70,
+    "sugars_g": 25,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": 2.5,
+    "protein_g": 6.6,
+    "salt_g": 0.8
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "s11_de_chocolate",
+  "code": null,
+  "product_name": "Schokolade",
+  "brands": null,
+  "country": "de",
+  "lang": "de",
+  "basis": "per_100g",
+  "synthetic": true,
+  "serving_size": 25,
+  "off_url": null,
+  "image_url": null,
+  "original_size": [
+    1120,
+    474
+  ],
+  "stored_size": [
+    1137,
+    565
+  ],
+  "license": "synthetic label rendered for this benchmark (CC0)",
+  "degrade": {
+    "cylinder": 0.35,
+    "rotate": -1,
+    "blur": 0.7,
+    "noise": 6,
+    "jpeg": 75,
+    "scale": 0.9,
+    "glare": 0.6,
+    "shade": 0.5
+  },
+  "truth": {
+    "energy_kcal": 547,
+    "energy_kj": 2280,
+    "fat_g": 33,
+    "saturated_fat_g": 20,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 52,
+    "sugars_g": 49,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": "absent",
+    "protein_g": 6.4,
+    "salt_g": 0.2
+  }
+}

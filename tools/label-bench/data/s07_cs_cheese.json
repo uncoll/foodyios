@@ -1,0 +1,46 @@
+{
+  "id": "s07_cs_cheese",
+  "code": null,
+  "product_name": "Sýr",
+  "brands": null,
+  "country": "cs",
+  "lang": "cs",
+  "basis": "per_100g",
+  "synthetic": true,
+  "serving_size": null,
+  "off_url": null,
+  "image_url": null,
+  "original_size": [
+    760,
+    420
+  ],
+  "stored_size": [
+    628,
+    393
+  ],
+  "license": "synthetic label rendered for this benchmark (CC0)",
+  "degrade": {
+    "perspective": 0.02,
+    "rotate": 0.5,
+    "blur": 0.7,
+    "noise": 5,
+    "jpeg": 70,
+    "scale": 0.7,
+    "shade": 0.2
+  },
+  "truth": {
+    "energy_kcal": 332,
+    "energy_kj": 1380,
+    "fat_g": 27,
+    "saturated_fat_g": 18,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 1.5,
+    "sugars_g": 0.5,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": "absent",
+    "protein_g": 21,
+    "salt_g": 1.7
+  }
+}

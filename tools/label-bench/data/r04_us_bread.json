@@ -1,0 +1,34 @@
+{
+  "id": "r04_us_bread",
+  "code": null,
+  "product_name": "Bread (US label, per 28 g slice, blurry)",
+  "brands": null,
+  "country": "real",
+  "lang": "en",
+  "basis": "per_100g",
+  "synthetic": false,
+  "converted": true,
+  "serving_size": 28,
+  "off_url": null,
+  "image_url": "https://github.com/natthasath/python-nutrition-label (data/test_images/ocr_eng_03.jpg)",
+  "original_size": [
+    1773,
+    2364
+  ],
+  "stored_size": [
+    1200,
+    1600
+  ],
+  "license": "https://github.com/natthasath/python-nutrition-label (data/test_images/ocr_eng_03.jpg)",
+  "truth": {
+    "energy_kcal": 250,
+    "energy_kj": "absent",
+    "fat_g": 5.36,
+    "saturated_fat_g": 0,
+    "carbohydrates_g": 46.4,
+    "sugars_g": 7.14,
+    "fiber_g": 10.7,
+    "protein_g": 10.7,
+    "salt_g": "skip"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "s13_it_pasta",
+  "code": null,
+  "product_name": "Pasta",
+  "brands": null,
+  "country": "it",
+  "lang": "it",
+  "basis": "per_100g",
+  "synthetic": true,
+  "serving_size": 80,
+  "off_url": null,
+  "image_url": null,
+  "original_size": [
+    1120,
+    518
+  ],
+  "stored_size": [
+    1338,
+    764
+  ],
+  "license": "synthetic label rendered for this benchmark (CC0)",
+  "degrade": {
+    "perspective": 0.02,
+    "rotate": 2.5,
+    "blur": 0.5,
+    "noise": 3,
+    "jpeg": 85,
+    "scale": 1.0,
+    "shade": 0.2
+  },
+  "truth": {
+    "energy_kcal": 359,
+    "energy_kj": 1521,
+    "fat_g": 1.5,
+    "saturated_fat_g": 0.3,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 71,
+    "sugars_g": 3.5,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": 3.0,
+    "protein_g": 13,
+    "salt_g": 0.013
+  }
+}

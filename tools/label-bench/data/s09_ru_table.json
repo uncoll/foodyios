@@ -1,0 +1,46 @@
+{
+  "id": "s09_ru_table",
+  "code": null,
+  "product_name": "Каша",
+  "brands": null,
+  "country": "ru",
+  "lang": "ru",
+  "basis": "per_100g",
+  "synthetic": true,
+  "serving_size": null,
+  "off_url": null,
+  "image_url": null,
+  "original_size": [
+    1040,
+    504
+  ],
+  "stored_size": [
+    1161,
+    694
+  ],
+  "license": "synthetic label rendered for this benchmark (CC0)",
+  "degrade": {
+    "perspective": 0.04,
+    "rotate": -2,
+    "blur": 0.5,
+    "noise": 4,
+    "jpeg": 82,
+    "scale": 0.9,
+    "shade": 0.6
+  },
+  "truth": {
+    "energy_kcal": 350,
+    "energy_kj": 1470,
+    "fat_g": 6.5,
+    "saturated_fat_g": 1.2,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 60.0,
+    "sugars_g": 1.0,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": 9.0,
+    "protein_g": 11.0,
+    "salt_g": 0.02
+  }
+}

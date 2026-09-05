@@ -1,0 +1,792 @@
+[
+  {
+    "id": "r01_en_cookies",
+    "code": null,
+    "product_name": "Cookies (UK label, red foil, glare)",
+    "brands": null,
+    "country": "real",
+    "lang": "en",
+    "basis": "per_100g",
+    "synthetic": false,
+    "converted": false,
+    "serving_size": 21,
+    "off_url": null,
+    "image_url": "https://github.com/openfoodfacts/openfoodfacts-dart (test/test_assets/nutrition_en.jpg), фото участников Open Food Facts, CC BY-SA 3.0",
+    "original_size": [
+      2050,
+      1336
+    ],
+    "stored_size": [
+      1600,
+      1043
+    ],
+    "license": "https://github.com/openfoodfacts/openfoodfacts-dart (test/test_assets/nutrition_en.jpg), фото участников Open Food Facts, CC BY-SA 3.0",
+    "truth": {
+      "energy_kcal": 497,
+      "energy_kj": 2085,
+      "fat_g": 22.6,
+      "saturated_fat_g": 11.6,
+      "carbohydrates_g": 66.3,
+      "sugars_g": 37.3,
+      "fiber_g": 3.1,
+      "protein_g": 5.5,
+      "salt_g": 0.6
+    }
+  },
+  {
+    "id": "r02_us_cranberry",
+    "code": null,
+    "product_name": "Cranberry juice (US label, per 240 ml serving only)",
+    "brands": null,
+    "country": "real",
+    "lang": "en",
+    "basis": "per_100ml",
+    "synthetic": false,
+    "converted": true,
+    "serving_size": 240,
+    "off_url": null,
+    "image_url": "https://github.com/natthasath/python-nutrition-label (data/test_images/ocr_eng_01.jpg)",
+    "original_size": [
+      960,
+      1280
+    ],
+    "stored_size": [
+      960,
+      1280
+    ],
+    "license": "https://github.com/natthasath/python-nutrition-label (data/test_images/ocr_eng_01.jpg)",
+    "truth": {
+      "energy_kcal": 45.8,
+      "energy_kj": "absent",
+      "fat_g": 0,
+      "saturated_fat_g": "absent",
+      "carbohydrates_g": 11.67,
+      "sugars_g": 11.67,
+      "fiber_g": "absent",
+      "protein_g": 0,
+      "salt_g": "skip"
+    }
+  },
+  {
+    "id": "r03_us_orange_nosize",
+    "code": null,
+    "product_name": "Orange juice (US label, serving '1 bottle' without size -> no per-100 values possible)",
+    "brands": null,
+    "country": "real",
+    "lang": "en",
+    "basis": "per_100ml",
+    "synthetic": false,
+    "converted": true,
+    "serving_size": null,
+    "off_url": null,
+    "image_url": "https://github.com/natthasath/python-nutrition-label (data/test_images/ocr_eng_02.jpg)",
+    "original_size": [
+      1773,
+      2364
+    ],
+    "stored_size": [
+      1200,
+      1600
+    ],
+    "license": "https://github.com/natthasath/python-nutrition-label (data/test_images/ocr_eng_02.jpg)",
+    "truth": {
+      "energy_kcal": "absent",
+      "energy_kj": "absent",
+      "fat_g": "absent",
+      "saturated_fat_g": "absent",
+      "carbohydrates_g": "absent",
+      "sugars_g": "absent",
+      "fiber_g": "absent",
+      "protein_g": "absent",
+      "salt_g": "skip"
+    }
+  },
+  {
+    "id": "r04_us_bread",
+    "code": null,
+    "product_name": "Bread (US label, per 28 g slice, blurry)",
+    "brands": null,
+    "country": "real",
+    "lang": "en",
+    "basis": "per_100g",
+    "synthetic": false,
+    "converted": true,
+    "serving_size": 28,
+    "off_url": null,
+    "image_url": "https://github.com/natthasath/python-nutrition-label (data/test_images/ocr_eng_03.jpg)",
+    "original_size": [
+      1773,
+      2364
+    ],
+    "stored_size": [
+      1200,
+      1600
+    ],
+    "license": "https://github.com/natthasath/python-nutrition-label (data/test_images/ocr_eng_03.jpg)",
+    "truth": {
+      "energy_kcal": 250,
+      "energy_kj": "absent",
+      "fat_g": 5.36,
+      "saturated_fat_g": 0,
+      "carbohydrates_g": 46.4,
+      "sugars_g": 7.14,
+      "fiber_g": 10.7,
+      "protein_g": 10.7,
+      "salt_g": "skip"
+    }
+  },
+  {
+    "id": "s01_de_oats",
+    "code": null,
+    "product_name": "Haferflocken",
+    "brands": null,
+    "country": "de",
+    "lang": "de",
+    "basis": "per_100g",
+    "synthetic": true,
+    "serving_size": null,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      1040,
+      558
+    ],
+    "stored_size": [
+      1184,
+      765
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "perspective": 0.05,
+      "rotate": -2,
+      "blur": 0.6,
+      "noise": 4,
+      "jpeg": 80,
+      "scale": 0.9,
+      "shade": 0.3
+    },
+    "truth": {
+      "energy_kcal": 372,
+      "energy_kj": 1560,
+      "fat_g": 7.0,
+      "saturated_fat_g": 1.3,
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 58.7,
+      "sugars_g": 0.7,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": 10.0,
+      "protein_g": 13.5,
+      "salt_g": {
+        "lt": 0.01
+      }
+    }
+  },
+  {
+    "id": "s02_fr_biscuits",
+    "code": null,
+    "product_name": "Biscuits",
+    "brands": null,
+    "country": "fr",
+    "lang": "fr",
+    "basis": "per_100g",
+    "synthetic": true,
+    "serving_size": 12.5,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      1360,
+      556
+    ],
+    "stored_size": [
+      1417,
+      783
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "perspective": 0.03,
+      "rotate": -4,
+      "blur": 0.7,
+      "noise": 5,
+      "jpeg": 75,
+      "scale": 0.85,
+      "shade": 0.5
+    },
+    "truth": {
+      "energy_kcal": 473,
+      "energy_kj": 1985,
+      "fat_g": 17,
+      "saturated_fat_g": 8.2,
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 70,
+      "sugars_g": 25,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": 2.5,
+      "protein_g": 6.6,
+      "salt_g": 0.8
+    }
+  },
+  {
+    "id": "s03_it_drink",
+    "code": null,
+    "product_name": "Bevanda",
+    "brands": null,
+    "country": "it",
+    "lang": "it",
+    "basis": "per_100ml",
+    "synthetic": true,
+    "serving_size": null,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      840,
+      490
+    ],
+    "stored_size": [
+      856,
+      547
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "cylinder": 0.55,
+      "rotate": 1,
+      "blur": 0.8,
+      "noise": 6,
+      "jpeg": 78,
+      "scale": 0.9,
+      "glare": 0.5,
+      "shade": 0.4
+    },
+    "truth": {
+      "energy_kcal": 43,
+      "energy_kj": 180,
+      "fat_g": 0,
+      "saturated_fat_g": 0,
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 10.5,
+      "sugars_g": 10.5,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": "absent",
+      "protein_g": 0,
+      "salt_g": 0.01
+    }
+  },
+  {
+    "id": "s04_es_yogur",
+    "code": null,
+    "product_name": "Yogur",
+    "brands": null,
+    "country": "es",
+    "lang": "es",
+    "basis": "per_100g",
+    "synthetic": true,
+    "serving_size": 125,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      1120,
+      456
+    ],
+    "stored_size": [
+      1314,
+      706
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "perspective": 0.04,
+      "rotate": 2,
+      "blur": 0.5,
+      "noise": 3,
+      "jpeg": 85,
+      "scale": 0.95,
+      "shade": 0.25
+    },
+    "truth": {
+      "energy_kcal": 94,
+      "energy_kj": 395,
+      "fat_g": 3.0,
+      "saturated_fat_g": 2.0,
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 12.8,
+      "sugars_g": 12.2,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": "absent",
+      "protein_g": 3.7,
+      "salt_g": 0.13
+    }
+  },
+  {
+    "id": "s05_pl_bread",
+    "code": null,
+    "product_name": "Chleb",
+    "brands": null,
+    "country": "pl",
+    "lang": "pl",
+    "basis": "per_100g",
+    "synthetic": true,
+    "serving_size": null,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      1000,
+      516
+    ],
+    "stored_size": [
+      664,
+      402
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "perspective": 0.03,
+      "rotate": -1,
+      "blur": 1.3,
+      "noise": 9,
+      "jpeg": 60,
+      "scale": 0.55,
+      "shade": 0.35
+    },
+    "truth": {
+      "energy_kcal": 247,
+      "energy_kj": 1040,
+      "fat_g": 1.8,
+      "saturated_fat_g": 0.4,
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 46,
+      "sugars_g": 3.2,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": 6.1,
+      "protein_g": 8.5,
+      "salt_g": 1.2
+    }
+  },
+  {
+    "id": "s06_nl_pindakaas",
+    "code": null,
+    "product_name": "Pindakaas",
+    "brands": null,
+    "country": "nl",
+    "lang": "nl",
+    "basis": "per_100g",
+    "synthetic": true,
+    "serving_size": null,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      1040,
+      630
+    ],
+    "stored_size": [
+      1310,
+      961
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "perspective": 0.1,
+      "rotate": 3,
+      "blur": 0.6,
+      "noise": 4,
+      "jpeg": 80,
+      "scale": 0.9,
+      "shade": 0.4
+    },
+    "truth": {
+      "energy_kcal": 632,
+      "energy_kj": 2620,
+      "fat_g": 52,
+      "saturated_fat_g": 9.0,
+      "monounsaturated_fat_g": 25,
+      "polyunsaturated_fat_g": 16,
+      "carbohydrates_g": 12,
+      "sugars_g": 6.5,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": 7.5,
+      "protein_g": 25,
+      "salt_g": 1.1
+    }
+  },
+  {
+    "id": "s07_cs_cheese",
+    "code": null,
+    "product_name": "Sýr",
+    "brands": null,
+    "country": "cs",
+    "lang": "cs",
+    "basis": "per_100g",
+    "synthetic": true,
+    "serving_size": null,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      760,
+      420
+    ],
+    "stored_size": [
+      628,
+      393
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "perspective": 0.02,
+      "rotate": 0.5,
+      "blur": 0.7,
+      "noise": 5,
+      "jpeg": 70,
+      "scale": 0.7,
+      "shade": 0.2
+    },
+    "truth": {
+      "energy_kcal": 332,
+      "energy_kj": 1380,
+      "fat_g": 27,
+      "saturated_fat_g": 18,
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 1.5,
+      "sugars_g": 0.5,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": "absent",
+      "protein_g": 21,
+      "salt_g": 1.7
+    }
+  },
+  {
+    "id": "s08_ru_inline",
+    "code": null,
+    "product_name": "Печенье",
+    "brands": null,
+    "country": "ru",
+    "lang": "ru",
+    "basis": "per_100g",
+    "synthetic": true,
+    "serving_size": null,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      1120,
+      248
+    ],
+    "stored_size": [
+      1150,
+      450
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "perspective": 0.03,
+      "rotate": 3,
+      "blur": 0.8,
+      "noise": 5,
+      "jpeg": 75,
+      "scale": 0.85,
+      "shade": 0.3
+    },
+    "truth": {
+      "energy_kcal": 456,
+      "energy_kj": 1910,
+      "fat_g": 18.0,
+      "saturated_fat_g": "absent",
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 66.0,
+      "sugars_g": "absent",
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": "absent",
+      "protein_g": 7.5,
+      "salt_g": "absent"
+    }
+  },
+  {
+    "id": "s09_ru_table",
+    "code": null,
+    "product_name": "Каша",
+    "brands": null,
+    "country": "ru",
+    "lang": "ru",
+    "basis": "per_100g",
+    "synthetic": true,
+    "serving_size": null,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      1040,
+      504
+    ],
+    "stored_size": [
+      1161,
+      694
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "perspective": 0.04,
+      "rotate": -2,
+      "blur": 0.5,
+      "noise": 4,
+      "jpeg": 82,
+      "scale": 0.9,
+      "shade": 0.6
+    },
+    "truth": {
+      "energy_kcal": 350,
+      "energy_kj": 1470,
+      "fat_g": 6.5,
+      "saturated_fat_g": 1.2,
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 60.0,
+      "sugars_g": 1.0,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": 9.0,
+      "protein_g": 11.0,
+      "salt_g": 0.02
+    }
+  },
+  {
+    "id": "s10_en_cereal",
+    "code": null,
+    "product_name": "Cereal",
+    "brands": null,
+    "country": "en",
+    "lang": "en",
+    "basis": "per_100g",
+    "synthetic": true,
+    "serving_size": 30,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      1280,
+      868
+    ],
+    "stored_size": [
+      1452,
+      1092
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "perspective": 0.05,
+      "rotate": 1.5,
+      "blur": 0.6,
+      "noise": 4,
+      "jpeg": 80,
+      "scale": 0.9,
+      "shade": 0.3
+    },
+    "truth": {
+      "energy_kcal": 383,
+      "energy_kj": 1620,
+      "fat_g": 2.3,
+      "saturated_fat_g": 0.5,
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 76,
+      "sugars_g": 21,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": 7.1,
+      "protein_g": 8.0,
+      "salt_g": 0.9
+    }
+  },
+  {
+    "id": "s11_de_chocolate",
+    "code": null,
+    "product_name": "Schokolade",
+    "brands": null,
+    "country": "de",
+    "lang": "de",
+    "basis": "per_100g",
+    "synthetic": true,
+    "serving_size": 25,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      1120,
+      474
+    ],
+    "stored_size": [
+      1137,
+      565
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "cylinder": 0.35,
+      "rotate": -1,
+      "blur": 0.7,
+      "noise": 6,
+      "jpeg": 75,
+      "scale": 0.9,
+      "glare": 0.6,
+      "shade": 0.5
+    },
+    "truth": {
+      "energy_kcal": 547,
+      "energy_kj": 2280,
+      "fat_g": 33,
+      "saturated_fat_g": 20,
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 52,
+      "sugars_g": 49,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": "absent",
+      "protein_g": 6.4,
+      "salt_g": 0.2
+    }
+  },
+  {
+    "id": "s12_fr_soup_hard",
+    "code": null,
+    "product_name": "Soupe",
+    "brands": null,
+    "country": "fr",
+    "lang": "fr",
+    "basis": "per_100ml",
+    "synthetic": true,
+    "serving_size": null,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      960,
+      516
+    ],
+    "stored_size": [
+      747,
+      495
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "perspective": 0.06,
+      "rotate": -3,
+      "blur": 1.9,
+      "noise": 12,
+      "jpeg": 45,
+      "scale": 0.6,
+      "shade": 0.5
+    },
+    "truth": {
+      "energy_kcal": 34,
+      "energy_kj": 143,
+      "fat_g": 1.1,
+      "saturated_fat_g": 0.2,
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 5.0,
+      "sugars_g": 2.4,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": 0.9,
+      "protein_g": 1.0,
+      "salt_g": 0.6
+    }
+  },
+  {
+    "id": "s13_it_pasta",
+    "code": null,
+    "product_name": "Pasta",
+    "brands": null,
+    "country": "it",
+    "lang": "it",
+    "basis": "per_100g",
+    "synthetic": true,
+    "serving_size": 80,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      1120,
+      518
+    ],
+    "stored_size": [
+      1338,
+      764
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "perspective": 0.02,
+      "rotate": 2.5,
+      "blur": 0.5,
+      "noise": 3,
+      "jpeg": 85,
+      "scale": 1.0,
+      "shade": 0.2
+    },
+    "truth": {
+      "energy_kcal": 359,
+      "energy_kj": 1521,
+      "fat_g": 1.5,
+      "saturated_fat_g": 0.3,
+      "monounsaturated_fat_g": null,
+      "polyunsaturated_fat_g": null,
+      "carbohydrates_g": 71,
+      "sugars_g": 3.5,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": 3.0,
+      "protein_g": 13,
+      "salt_g": 0.013
+    }
+  },
+  {
+    "id": "s14_es_oil",
+    "code": null,
+    "product_name": "Aceite de oliva",
+    "brands": null,
+    "country": "es",
+    "lang": "es",
+    "basis": "per_100ml",
+    "synthetic": true,
+    "serving_size": null,
+    "off_url": null,
+    "image_url": null,
+    "original_size": [
+      880,
+      560
+    ],
+    "stored_size": [
+      836,
+      564
+    ],
+    "license": "synthetic label rendered for this benchmark (CC0)",
+    "degrade": {
+      "cylinder": 0.6,
+      "rotate": 0,
+      "blur": 0.7,
+      "noise": 5,
+      "jpeg": 78,
+      "scale": 0.85,
+      "glare": 0.4,
+      "shade": 0.4,
+      "tint": [
+        0.95,
+        1.0,
+        0.8
+      ]
+    },
+    "truth": {
+      "energy_kcal": 824,
+      "energy_kj": 3389,
+      "fat_g": 91.6,
+      "saturated_fat_g": 14,
+      "monounsaturated_fat_g": 69,
+      "polyunsaturated_fat_g": 8.6,
+      "carbohydrates_g": 0,
+      "sugars_g": 0,
+      "polyols_g": null,
+      "starch_g": null,
+      "fiber_g": "absent",
+      "protein_g": 0,
+      "salt_g": 0
+    }
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "id": "s10_en_cereal",
+  "code": null,
+  "product_name": "Cereal",
+  "brands": null,
+  "country": "en",
+  "lang": "en",
+  "basis": "per_100g",
+  "synthetic": true,
+  "serving_size": 30,
+  "off_url": null,
+  "image_url": null,
+  "original_size": [
+    1280,
+    868
+  ],
+  "stored_size": [
+    1452,
+    1092
+  ],
+  "license": "synthetic label rendered for this benchmark (CC0)",
+  "degrade": {
+    "perspective": 0.05,
+    "rotate": 1.5,
+    "blur": 0.6,
+    "noise": 4,
+    "jpeg": 80,
+    "scale": 0.9,
+    "shade": 0.3
+  },
+  "truth": {
+    "energy_kcal": 383,
+    "energy_kj": 1620,
+    "fat_g": 2.3,
+    "saturated_fat_g": 0.5,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 76,
+    "sugars_g": 21,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": 7.1,
+    "protein_g": 8.0,
+    "salt_g": 0.9
+  }
+}

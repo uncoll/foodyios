@@ -1,0 +1,43 @@
+{
+  "provider": "anthropic-agent",
+  "model": "claude-opus-5",
+  "image_id": "r02_us_cranberry",
+  "ok": true,
+  "latency_s": null,
+  "usage": null,
+  "parsed": {
+    "product_name": null,
+    "brand": null,
+    "basis": "per_100ml",
+    "serving_size_g": 240,
+    "serving_description": "Serving Size 8 fl oz (240mL) 1 cup",
+    "energy_kcal": 45.83,
+    "energy_kj": null,
+    "fat_g": 0,
+    "saturated_fat_g": null,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "trans_fat_g": null,
+    "cholesterol_mg": null,
+    "carbohydrates_g": 11.67,
+    "sugars_g": 11.67,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": null,
+    "protein_g": 0,
+    "salt_g": null,
+    "sodium_mg": 6.25,
+    "alcohol_g": null,
+    "micronutrients": [
+      {
+        "name": "potassium",
+        "amount": 79.17,
+        "unit": "mg"
+      }
+    ],
+    "label_language": "en",
+    "values_source": "converted_from_serving",
+    "notes": "US Nutrition Facts, only per-serving values; converted from 240 mL serving (x100/240). Vitamin C 100%, phosphorus 2%, magnesium 2% given only as %DV, so omitted. Label states not a significant source of saturated fat, trans fat, cholesterol, dietary fiber.",
+    "confidence": "high"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "s06_nl_pindakaas",
+  "code": null,
+  "product_name": "Pindakaas",
+  "brands": null,
+  "country": "nl",
+  "lang": "nl",
+  "basis": "per_100g",
+  "synthetic": true,
+  "serving_size": null,
+  "off_url": null,
+  "image_url": null,
+  "original_size": [
+    1040,
+    630
+  ],
+  "stored_size": [
+    1310,
+    961
+  ],
+  "license": "synthetic label rendered for this benchmark (CC0)",
+  "degrade": {
+    "perspective": 0.1,
+    "rotate": 3,
+    "blur": 0.6,
+    "noise": 4,
+    "jpeg": 80,
+    "scale": 0.9,
+    "shade": 0.4
+  },
+  "truth": {
+    "energy_kcal": 632,
+    "energy_kj": 2620,
+    "fat_g": 52,
+    "saturated_fat_g": 9.0,
+    "monounsaturated_fat_g": 25,
+    "polyunsaturated_fat_g": 16,
+    "carbohydrates_g": 12,
+    "sugars_g": 6.5,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": 7.5,
+    "protein_g": 25,
+    "salt_g": 1.1
+  }
+}

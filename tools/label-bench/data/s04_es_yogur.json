@@ -1,0 +1,46 @@
+{
+  "id": "s04_es_yogur",
+  "code": null,
+  "product_name": "Yogur",
+  "brands": null,
+  "country": "es",
+  "lang": "es",
+  "basis": "per_100g",
+  "synthetic": true,
+  "serving_size": 125,
+  "off_url": null,
+  "image_url": null,
+  "original_size": [
+    1120,
+    456
+  ],
+  "stored_size": [
+    1314,
+    706
+  ],
+  "license": "synthetic label rendered for this benchmark (CC0)",
+  "degrade": {
+    "perspective": 0.04,
+    "rotate": 2,
+    "blur": 0.5,
+    "noise": 3,
+    "jpeg": 85,
+    "scale": 0.95,
+    "shade": 0.25
+  },
+  "truth": {
+    "energy_kcal": 94,
+    "energy_kj": 395,
+    "fat_g": 3.0,
+    "saturated_fat_g": 2.0,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 12.8,
+    "sugars_g": 12.2,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": "absent",
+    "protein_g": 3.7,
+    "salt_g": 0.13
+  }
+}

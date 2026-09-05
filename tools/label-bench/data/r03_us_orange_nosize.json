@@ -1,0 +1,34 @@
+{
+  "id": "r03_us_orange_nosize",
+  "code": null,
+  "product_name": "Orange juice (US label, serving '1 bottle' without size -> no per-100 values possible)",
+  "brands": null,
+  "country": "real",
+  "lang": "en",
+  "basis": "per_100ml",
+  "synthetic": false,
+  "converted": true,
+  "serving_size": null,
+  "off_url": null,
+  "image_url": "https://github.com/natthasath/python-nutrition-label (data/test_images/ocr_eng_02.jpg)",
+  "original_size": [
+    1773,
+    2364
+  ],
+  "stored_size": [
+    1200,
+    1600
+  ],
+  "license": "https://github.com/natthasath/python-nutrition-label (data/test_images/ocr_eng_02.jpg)",
+  "truth": {
+    "energy_kcal": "absent",
+    "energy_kj": "absent",
+    "fat_g": "absent",
+    "saturated_fat_g": "absent",
+    "carbohydrates_g": "absent",
+    "sugars_g": "absent",
+    "fiber_g": "absent",
+    "protein_g": "absent",
+    "salt_g": "skip"
+  }
+}
