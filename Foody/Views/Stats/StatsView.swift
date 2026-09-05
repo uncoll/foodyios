@@ -185,9 +185,10 @@ struct KcalChartCard: View {
                 }
             }
             .chartXAxis {
-                AxisMarks(values: .stride(by: .day, count: period == .week ? 1 : 7)) { value in
+                AxisMarks(values: .stride(by: .day, count: period == .week ? 1 : 7)) { _ in
                     AxisGridLine()
-                    AxisValueLabel(format: period == .week ? .dateTime.weekday(.narrow) : .dateTime.day(), centered: period == .week)
+                    let labelFormat: Date.FormatStyle = period == .week ? .dateTime.weekday(.narrow) : .dateTime.day()
+                    AxisValueLabel(format: labelFormat, centered: period == .week)
                 }
             }
             .chartYAxis {

@@ -27,6 +27,7 @@ struct ProductFormView: View {
     @State private var labelImage: Data?
     @State private var showMicroPicker = false
     @State private var showPhoto = false
+    @State private var loaded = false
 
     private var isEdit: Bool {
         if case .edit = mode { return true }
@@ -108,14 +109,14 @@ struct ProductFormView: View {
                 }
 
                 Section {
-                    ForEach(Array(facts.micronutrients.enumerated()), id: \.element.key) { index, m in
+                    ForEach(Array(facts.micronutrients.enumerated()), id: \.offset) { index, m in
                         HStack {
                             Text(m.title)
                             Spacer()
-                            TextField("0", value: Binding(
-                                get: { facts.micronutrients[index].amount },
-                                set: { facts.micronutrients[index].amount = $0 }
-                            ), format: .number)
+                            TextField("0", value: Binding<Double>(
+                                get: { index < facts.micronutrients.count ? facts.micronutrients[index].amount : 0 },
+                                set: { if index < facts.micronutrients.count { facts.micronutrients[index].amount = $0 } }
+                            ), format: FloatingPointFormatStyle<Double>.number)
                             .keyboardType(.decimalPad)
                             .multilineTextAlignment(.trailing)
                             .frame(width: 80)
@@ -170,9 +171,15 @@ struct ProductFormView: View {
             .sheet(isPresented: $showPhoto) {
                 if let data = labelImage, let image = UIImage(data: data) {
                     PhotoViewer(image: image)
+                } else {
+                    ContentUnavailableView("Не удалось открыть фото", systemImage: "photo")
                 }
             }
-            .onAppear(perform: load)
+            .onAppear {
+                guard !loaded else { return }
+                loaded = true
+                load()
+            }
         }
     }
 

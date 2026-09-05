@@ -3,7 +3,7 @@ import SwiftData
 
 @main
 struct FoodyApp: App {
-    @State private var settings = AppSettings()
+    @StateObject private var settings = AppSettings()
     let container: ModelContainer
 
     init() {
@@ -11,14 +11,18 @@ struct FoodyApp: App {
             container = try FoodySchema.makeContainer()
         } catch {
             // Крайний случай (повреждённая база): работаем в памяти, чтобы приложение хотя бы открылось.
-            container = (try? FoodySchema.makeContainer(inMemory: true))!
+            do {
+                container = try FoodySchema.makeContainer(inMemory: true)
+            } catch {
+                fatalError("Не удалось создать хранилище SwiftData: \(error)")
+            }
         }
     }
 
     var body: some Scene {
         WindowGroup {
             RootTabView()
-                .environment(settings)
+                .environmentObject(settings)
                 .tint(Theme.accent)
         }
         .modelContainer(container)

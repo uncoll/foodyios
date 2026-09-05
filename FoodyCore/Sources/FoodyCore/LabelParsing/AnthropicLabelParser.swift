@@ -14,7 +14,7 @@ public struct AnthropicLabelParser: LabelParsing {
     /// Тело запроса (отдельно — для тестов). `effort` применяется только к моделям, которые его поддерживают (не Haiku).
     public static func requestBody(model: String, imageJPEG: Data, effort: String?) -> [String: Any] {
         var outputConfig: [String: Any] = [
-            "format": ["type": "json_schema", "schema": LabelParseSpec.schemaObject]
+            "format": ["type": "json_schema", "schema": LabelParseSpec.schemaObject] as [String: Any]
         ]
         if let effort = effort, !effort.isEmpty, !model.hasPrefix("claude-haiku") {
             outputConfig["effort"] = effort
@@ -26,10 +26,10 @@ public struct AnthropicLabelParser: LabelParsing {
                 "role": "user",
                 "content": [
                     ["type": "image", "source": ["type": "base64", "media_type": "image/jpeg",
-                                                  "data": imageJPEG.base64EncodedString()]],
-                    ["type": "text", "text": LabelParseSpec.instruction]
-                ]
-            ]],
+                                                  "data": imageJPEG.base64EncodedString()] as [String: Any]] as [String: Any],
+                    ["type": "text", "text": LabelParseSpec.instruction] as [String: Any]
+                ] as [Any]
+            ] as [String: Any]],
             "output_config": outputConfig
         ]
     }

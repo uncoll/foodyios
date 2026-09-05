@@ -4,7 +4,6 @@ import UniformTypeIdentifiers
 import FoodyCore
 
 struct SettingsView: View {
-    @Environment(AppSettings.self) private var settings
     @Environment(\.modelContext) private var context
     @State private var showTargets = false
     @State private var exportFile: ExportFile?
@@ -26,7 +25,12 @@ struct SettingsView: View {
                     Button {
                         exportBackup()
                     } label: {
-                        Label("Экспортировать резервную копию", systemImage: "square.and.arrow.up")
+                        Label(exportFile == nil ? "Создать резервную копию" : "Обновить резервную копию", systemImage: "doc.badge.plus")
+                    }
+                    if let file = exportFile {
+                        ShareLink(item: file.url) {
+                            Label("Поделиться файлом \(file.url.lastPathComponent)", systemImage: "square.and.arrow.up")
+                        }
                     }
                     Button {
                         showImporter = true
@@ -51,9 +55,6 @@ struct SettingsView: View {
             }
             .navigationTitle("Настройки")
             .sheet(isPresented: $showTargets) { TargetsView() }
-            .sheet(item: $exportFile) { file in
-                ShareSheet(items: [file.url])
-            }
             .fileImporter(isPresented: $showImporter, allowedContentTypes: [.json]) { result in
                 switch result {
                 case .success(let url):
@@ -109,11 +110,10 @@ struct ExportFile: Identifiable {
 
 /// Настройки распознавания этикеток: поставщик, модель, ключ, усилие.
 struct AISettingsSection: View {
-    @Environment(AppSettings.self) private var settings
+    @EnvironmentObject private var settings: AppSettings
     @State private var customModel = ""
 
     var body: some View {
-        @Bindable var settings = settings
         Section {
             Picker("Поставщик", selection: $settings.provider) {
                 ForEach(LLMProvider.allCases) { p in Text(p.title).tag(p) }
@@ -182,15 +182,4 @@ struct AISettingsSection: View {
             }
         }
     }
-}
-
-/// Системный лист «Поделиться».
-struct ShareSheet: UIViewControllerRepresentable {
-    let items: [Any]
-
-    func makeUIViewController(context: Context) -> UIActivityViewController {
-        UIActivityViewController(activityItems: items, applicationActivities: nil)
-    }
-
-    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }

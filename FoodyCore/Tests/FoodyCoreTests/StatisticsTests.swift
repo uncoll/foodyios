@@ -4,7 +4,7 @@ import XCTest
 final class StatisticsTests: XCTestCase {
     var cal: Calendar {
         var c = Calendar(identifier: .gregorian)
-        c.timeZone = TimeZone(identifier: "Europe/Berlin")!
+        c.timeZone = TimeZone(identifier: "Europe/Berlin") ?? TimeZone(secondsFromGMT: 2 * 3600)!
         c.locale = Locale(identifier: "ru_RU")
         return c
     }
@@ -88,11 +88,11 @@ final class StatisticsTests: XCTestCase {
 
     func testTargetCalculator() {
         let t = TargetCalculator.targets(sex: .male, weightKg: 80, heightCm: 180, age: 35, activity: .moderate, goal: .maintain)
-        // BMR = 10*80 + 6.25*180 - 5*35 + 5 = 1750; ×1.55 = 2712.5
-        XCTAssertEqual(t.kcal, 2713, accuracy: 1)
+        // BMR = 10*80 + 6.25*180 - 5*35 + 5 = 1755; ×1.55 = 2720.25
+        XCTAssertEqual(t.kcal, 2720, accuracy: 1)
         XCTAssertEqual(t.protein, 144)
         XCTAssertEqual(t.fat, 72)
-        XCTAssertEqual(t.carbs, ((2713 - 144 * 4 - 72 * 9) / 4).rounded(), accuracy: 1)
+        XCTAssertEqual(t.carbs, 374, accuracy: 1)
         XCTAssertEqual(MealCategory.suggested(forHour: 8), .breakfast)
         XCTAssertEqual(MealCategory.suggested(forHour: 13), .lunch)
         XCTAssertEqual(MealCategory.suggested(forHour: 19), .dinner)

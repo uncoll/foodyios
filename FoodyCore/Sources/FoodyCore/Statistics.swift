@@ -46,6 +46,14 @@ public struct DayTotals: Identifiable, Equatable, Sendable {
     public var targets: DailyTargets?
     public var entryCount: Int
 
+    public init(day: Date, facts: NutritionFacts, byCategory: [MealCategory: NutritionFacts], targets: DailyTargets?, entryCount: Int) {
+        self.day = day
+        self.facts = facts
+        self.byCategory = byCategory
+        self.targets = targets
+        self.entryCount = entryCount
+    }
+
     public var id: Date { day }
     public var hasEntries: Bool { entryCount > 0 }
 
@@ -93,6 +101,16 @@ public struct PeriodStats: Equatable, Sendable {
     public var loggedDays: Int
     /// Сумма целей за учтённые дни (дни с записями); nil, если целей не было.
     public var targetSum: DailyTargets?
+
+    public init(period: StatsPeriod, days: [DayTotals], total: NutritionFacts, byCategory: [MealCategory: NutritionFacts],
+                loggedDays: Int, targetSum: DailyTargets?) {
+        self.period = period
+        self.days = days
+        self.total = total
+        self.byCategory = byCategory
+        self.loggedDays = loggedDays
+        self.targetSum = targetSum
+    }
 
     /// Среднее в день по учтённым дням.
     public var averagePerLoggedDay: NutritionFacts {

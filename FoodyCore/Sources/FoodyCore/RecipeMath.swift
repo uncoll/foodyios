@@ -59,4 +59,15 @@ public struct RecipeSummary: Equatable, Sendable {
     public var portionWeight: Double
     public var perPortion: NutritionFacts
     public var portionsCount: Double
+
+    public init(rawWeight: Double, finalWeight: Double, total: NutritionFacts, per100: NutritionFacts, portionWeight: Double,
+                perPortion: NutritionFacts, portionsCount: Double) {
+        self.rawWeight = rawWeight
+        self.finalWeight = finalWeight
+        self.total = total
+        self.per100 = per100
+        self.portionWeight = portionWeight
+        self.perPortion = perPortion
+        self.portionsCount = portionsCount
+    }
 }

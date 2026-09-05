@@ -85,7 +85,8 @@ struct AddEntrySheet: View {
             }
             .sheet(isPresented: $showScan) {
                 LabelScanFlowView { product in
-                    selectedProduct = product
+                    // Лист сканирования закрывается сам; открываем ввод количества после завершения анимации.
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { selectedProduct = product }
                 }
             }
         }

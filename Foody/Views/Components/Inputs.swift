@@ -23,7 +23,9 @@ struct DecimalField: View {
                     if parsed != value { value = parsed }
                 }
                 .onChange(of: value) { _, newValue in
-                    if NutrientFormatter.parse(text) != newValue {
+                    // Не переписываем текст, пока пользователь стирает поле (пусто ↔ 0 у обязательных полей).
+                    let emptyZero = text.isEmpty && (newValue ?? 0) == 0
+                    if NutrientFormatter.parse(text) != newValue && !emptyZero {
                         text = newValue.map { NutrientFormatter.precise($0) } ?? ""
                     }
                 }

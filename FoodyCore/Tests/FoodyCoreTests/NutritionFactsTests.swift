@@ -77,7 +77,8 @@ final class NutritionFactsTests: XCTestCase {
         XCTAssertEqual(NutrientFormatter.parse("<0,5"), 0.5)
         XCTAssertNil(NutrientFormatter.parse(""))
         XCTAssertEqual(NutrientFormatter.grams(12.5), "12,5")
-        XCTAssertEqual(NutrientFormatter.kcal(1234.4), "1 234")
+        XCTAssertEqual(NutrientFormatter.kcal(1234.4), "1\u{00A0}234")
+        XCTAssertEqual(NutrientFormatter.parse(NutrientFormatter.kcal(1234.4)), 1234)
         XCTAssertEqual(NutrientFormatter.percent(0.856), "86 %")
     }
 }

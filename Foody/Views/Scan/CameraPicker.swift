@@ -31,11 +31,11 @@ struct CameraPicker: UIViewControllerRepresentable {
 
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             let image = (info[.editedImage] as? UIImage) ?? (info[.originalImage] as? UIImage)
-            picker.dismiss(animated: true) { self.onImage(image) }
+            onImage(image)   // fullScreenCover закрывает SwiftUI по showCamera = false
         }
 
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            picker.dismiss(animated: true) { self.onImage(nil) }
+            onImage(nil)
         }
     }
 }

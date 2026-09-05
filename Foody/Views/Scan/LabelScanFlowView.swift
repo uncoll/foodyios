@@ -7,7 +7,7 @@ struct LabelScanFlowView: View {
     let onSaved: (Product) -> Void
 
     @Environment(\.dismiss) private var dismiss
-    @Environment(AppSettings.self) private var settings
+    @EnvironmentObject private var settings: AppSettings
 
     enum Stage: Equatable {
         case choose
@@ -170,20 +170,17 @@ struct LabelScanFlowView: View {
         }
     }
 
+    @MainActor
     private func start(with picked: UIImage) {
         image = picked
         stage = .recognizing
         Task {
             do {
                 let result = try await LabelScanService.scan(image: picked, settings: settings)
-                await MainActor.run {
-                    draft = result
-                    stage = .review
-                }
+                draft = result
+                stage = .review
             } catch {
-                await MainActor.run {
-                    errorMessage = error.localizedDescription
-                }
+                errorMessage = error.localizedDescription
             }
         }
     }

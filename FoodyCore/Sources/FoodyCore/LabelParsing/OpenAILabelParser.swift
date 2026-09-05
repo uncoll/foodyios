@@ -24,16 +24,16 @@ public struct OpenAILabelParser: LabelParsing {
             "input": [[
                 "role": "user",
                 "content": [
-                    ["type": "input_text", "text": LabelParseSpec.instruction],
-                    ["type": "input_image", "image_url": dataURL, "detail": detail]
-                ]
-            ]],
+                    ["type": "input_text", "text": LabelParseSpec.instruction] as [String: Any],
+                    ["type": "input_image", "image_url": dataURL, "detail": detail] as [String: Any]
+                ] as [Any]
+            ] as [String: Any]],
             "text": ["format": [
                 "type": "json_schema",
                 "name": LabelParseSpec.schemaName,
                 "strict": true,
                 "schema": LabelParseSpec.schemaObject
-            ]],
+            ] as [String: Any]] as [String: Any],
             "max_output_tokens": 4000,
             "store": false
         ]

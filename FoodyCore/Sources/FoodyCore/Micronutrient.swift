@@ -166,7 +166,7 @@ public struct MicronutrientValue: Codable, Equatable, Hashable, Sendable {
     public var nrvFraction: Double? {
         guard let k = known else { return nil }
         let normalizedUnit = unit.lowercased()
-            .replacingOccurrences(of: "µg", with: "мкг").replacingOccurrences(of: "ug", with: "мкг")
+            .replacingOccurrences(of: "µg", with: "мкг").replacingOccurrences(of: "\u{03BC}g", with: "мкг").replacingOccurrences(of: "ug", with: "мкг")
             .replacingOccurrences(of: "mcg", with: "мкг").replacingOccurrences(of: "mg", with: "мг")
         var amountInNrvUnit = amount
         if normalizedUnit != k.unit {

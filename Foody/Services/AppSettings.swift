@@ -1,35 +1,30 @@
 import Foundation
-import SwiftUI
+import Combine
 import FoodyCore
 
 /// Настройки приложения (UserDefaults) + ключи (Keychain).
-@Observable
-final class AppSettings {
+final class AppSettings: ObservableObject {
     private let defaults = UserDefaults.standard
 
-    var provider: LLMProvider {
+    @Published var provider: LLMProvider {
         didSet { defaults.set(provider.rawValue, forKey: "ai.provider") }
     }
-    var model: String {
+    @Published var model: String {
         didSet { defaults.set(model, forKey: "ai.model") }
     }
     /// Усилие рассуждения: "" (по умолчанию модели), "low", "medium", "high".
-    var effort: String {
+    @Published var effort: String {
         didSet { defaults.set(effort, forKey: "ai.effort") }
     }
     /// Сохранять фото этикетки в карточке продукта.
-    var keepLabelPhoto: Bool {
+    @Published var keepLabelPhoto: Bool {
         didSet { defaults.set(keepLabelPhoto, forKey: "scan.keepPhoto") }
     }
-    var openAIKey: String {
+    @Published var openAIKey: String {
         didSet { KeychainStore.set(openAIKey, for: "openai") }
     }
-    var anthropicKey: String {
+    @Published var anthropicKey: String {
         didSet { KeychainStore.set(anthropicKey, for: "anthropic") }
-    }
-    /// Первый запуск завершён (создан план целей по умолчанию).
-    var didFinishOnboarding: Bool {
-        didSet { defaults.set(didFinishOnboarding, forKey: "app.onboarded") }
     }
 
     init() {
@@ -40,7 +35,6 @@ final class AppSettings {
         keepLabelPhoto = defaults.object(forKey: "scan.keepPhoto") as? Bool ?? true
         openAIKey = KeychainStore.get("openai")
         anthropicKey = KeychainStore.get("anthropic")
-        didFinishOnboarding = defaults.bool(forKey: "app.onboarded")
     }
 
     var currentKey: String {

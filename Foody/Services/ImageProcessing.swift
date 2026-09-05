@@ -6,7 +6,9 @@ enum ImageProcessing {
     static func prepareForUpload(_ image: UIImage, maxSide: CGFloat = 1600, quality: CGFloat = 0.88) -> Data? {
         let normalized = image.normalizedOrientation()
         let size = normalized.size
-        let scale = min(1, maxSide / max(size.width, size.height))
+        let longest = max(size.width, size.height)
+        guard longest > 0 else { return nil }
+        let scale = min(1, maxSide / longest)
         let target = CGSize(width: (size.width * scale).rounded(), height: (size.height * scale).rounded())
         let format = UIGraphicsImageRendererFormat.default()
         format.scale = 1

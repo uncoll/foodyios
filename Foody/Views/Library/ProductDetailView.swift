@@ -137,6 +137,8 @@ struct ProductDetailView: View {
         .sheet(isPresented: $showPhoto) {
             if let data = product.labelImage, let image = UIImage(data: data) {
                 PhotoViewer(image: image)
+            } else {
+                ContentUnavailableView("Не удалось открыть фото", systemImage: "photo")
             }
         }
         .confirmationDialog("Удалить продукт?", isPresented: $confirmDelete, titleVisibility: .visible) {

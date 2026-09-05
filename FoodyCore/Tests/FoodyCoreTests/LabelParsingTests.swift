@@ -33,7 +33,7 @@ final class LabelParsingTests: XCTestCase {
         XCTAssertEqual(r.measureBasis, .milliliters)
         XCTAssertEqual(r.energyKcal, 43)
         XCTAssertEqual(r.sugarsG, 10.5)
-        XCTAssertFalse(r.hasMainValues == false)
+        XCTAssertTrue(r.hasMainValues)
     }
 
     func testSchemaIsValidJSONAndMatchesCodingKeys() throws {

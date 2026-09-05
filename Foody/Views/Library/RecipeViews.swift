@@ -314,16 +314,10 @@ struct SavedMealFormView: View {
                         MacroSummaryLine(facts: total)
                     }
                 }
-                if let m = meal {
+                if meal != nil {
                     Section {
                         Button { showLog = true } label: { Label("Добавить в дневник сегодня", systemImage: "plus.circle.fill") }
                         Button("Удалить приём пищи", role: .destructive) { confirmDelete = true }
-                    }
-                    .confirmationDialog("Удалить сохранённый приём?", isPresented: $confirmDelete, titleVisibility: .visible) {
-                        Button("Удалить", role: .destructive) {
-                            context.delete(m)
-                            dismiss()
-                        }
                     }
                 }
             }
@@ -349,6 +343,12 @@ struct SavedMealFormView: View {
             .sheet(isPresented: $showLog) {
                 if let m = meal {
                     MealConfirmSheet(meal: m, category: m.category, day: Calendar.current.startOfDay(for: Date())) { dismiss() }
+                }
+            }
+            .confirmationDialog("Удалить сохранённый приём?", isPresented: $confirmDelete, titleVisibility: .visible) {
+                Button("Удалить", role: .destructive) {
+                    if let m = meal { context.delete(m) }
+                    dismiss()
                 }
             }
             .onAppear {
