@@ -3,6 +3,12 @@ name: Label parsing benchmark
 # Запуск вручную из вкладки Actions. API-ключи передаются во вложенный workflow как секреты,
 # поэтому в логах они маскируются. Результаты коммитятся в ветку (tools/label-bench/data, results).
 on:
+  # push на сам файл нужен только чтобы GitHub зарегистрировал workflow (иначе ручной запуск недоступен);
+  # такой запуск делает только пересчёт summary (stage=score).
+  push:
+    paths:
+      - ".github/workflows/label-bench.yml"
+      - ".github/workflows/label-bench-impl.yml"
   workflow_dispatch:
     inputs:
       stage:
@@ -42,11 +48,11 @@ jobs:
   bench:
     uses: ./.github/workflows/label-bench-impl.yml
     with:
-      stage: ${{ inputs.stage }}
-      openai_models: ${{ inputs.openai_models }}
-      anthropic_models: ${{ inputs.anthropic_models }}
-      limit: ${{ inputs.limit }}
-      effort: ${{ inputs.effort }}
+      stage: ${{ inputs.stage || 'score' }}
+      openai_models: ${{ inputs.openai_models || '' }}
+      anthropic_models: ${{ inputs.anthropic_models || '' }}
+      limit: ${{ inputs.limit || '0' }}
+      effort: ${{ inputs.effort || 'low' }}
     secrets:
-      OPENAI_API_KEY: ${{ inputs.openai_api_key }}
-      ANTHROPIC_API_KEY: ${{ inputs.anthropic_api_key }}
+      OPENAI_API_KEY: ${{ inputs.openai_api_key || '' }}
+      ANTHROPIC_API_KEY: ${{ inputs.anthropic_api_key || '' }}
