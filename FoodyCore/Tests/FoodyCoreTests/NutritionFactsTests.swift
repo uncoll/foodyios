@@ -25,7 +25,8 @@ final class NutritionFactsTests: XCTestCase {
     func testKcalFallbacks() {
         XCTAssertEqual(NutritionFacts(energyKJ: 418.4).kcal, 100, accuracy: 0.01)
         let macrosOnly = NutritionFacts(fat: 10, carbohydrates: 20, protein: 5)
-        XCTAssertEqual(macrosOnly.kcal, 10 * 9 + 20 * 4 + 5 * 4, accuracy: 0.001)
+        let expectedKcal: Double = 190   // 10 г жира × 9 + 20 г углеводов × 4 + 5 г белка × 4
+        XCTAssertEqual(macrosOnly.kcal, expectedKcal, accuracy: 0.001)
         XCTAssertEqual(NutritionFacts().kcal, 0)
         XCTAssertEqual(NutritionFacts(energyKcal: 100).kJ ?? 0, 418.4, accuracy: 0.01)
     }

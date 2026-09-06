@@ -18,7 +18,9 @@ jobs:
       - name: Swift version
         run: swift --version
       - name: Test
-        run: swift test --package-path FoodyCore 2>&1 | tail -80
+        run: |
+          set -o pipefail
+          swift test --package-path FoodyCore 2>&1 | tail -80
 
   ios-build:
     name: Build app (Xcode)
@@ -31,11 +33,14 @@ jobs:
         run: sudo xcode-select -s /Applications/Xcode_16.4.app && xcodebuild -version
 
       - name: FoodyCore tests (macOS)
-        run: swift test --package-path FoodyCore 2>&1 | tail -60
+        run: |
+          set -o pipefail
+          swift test --package-path FoodyCore 2>&1 | tail -60
 
       - name: Build for iOS Simulator
         run: |
           set -o pipefail
+          mkdir -p build
           xcodebuild -project Foody.xcodeproj -scheme Foody -configuration Debug \
             -destination 'generic/platform=iOS Simulator' -derivedDataPath build/DerivedData \
             CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build/sim.log | grep -E "error:|warning: unre|BUILD (SUCCEEDED|FAILED)" || true
