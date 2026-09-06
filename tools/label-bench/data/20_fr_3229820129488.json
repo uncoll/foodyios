@@ -1,0 +1,37 @@
+{
+  "id": "20_fr_3229820129488",
+  "code": "3229820129488",
+  "product_name": "Muesli Raisin, Figue, Datte, Abricot",
+  "brands": "Bjorg",
+  "country": "france",
+  "lang": "fr",
+  "quantity": "375 g",
+  "serving_size": "60g",
+  "off_url": "https://world.openfoodfacts.org/product/3229820129488",
+  "image_url": "https://images.openfoodfacts.org/images/products/322/982/012/9488/nutrition_fr.268.full.jpg",
+  "original_size": [
+    2644,
+    1581
+  ],
+  "stored_size": [
+    1600,
+    957
+  ],
+  "license": "Open Food Facts contributors, ODbL / CC BY-SA 3.0",
+  "truth": {
+    "energy_kcal": 352.0,
+    "energy_kj": 1485.0,
+    "fat_g": 5.8,
+    "saturated_fat_g": 0.9,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 59.0,
+    "sugars_g": 14.0,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": 10.0,
+    "protein_g": 11.0,
+    "salt_g": 0.03,
+    "sodium_g": 0.012
+  }
+}

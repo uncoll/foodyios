@@ -1,0 +1,37 @@
+{
+  "id": "24_it_8000500310427",
+  "code": "8000500310427",
+  "product_name": "Biscuits NUTELLA Biscuits Noisettes et Cacao x22 - 304g",
+  "brands": "Ferrero, Nutella biscuits",
+  "country": "italy",
+  "lang": "it",
+  "quantity": "304 g",
+  "serving_size": "13.8 g",
+  "off_url": "https://world.openfoodfacts.org/product/8000500310427",
+  "image_url": "https://images.openfoodfacts.org/images/products/800/050/031/0427/nutrition_it.546.full.jpg",
+  "original_size": [
+    3468,
+    4624
+  ],
+  "stored_size": [
+    1200,
+    1600
+  ],
+  "license": "Open Food Facts contributors, ODbL / CC BY-SA 3.0",
+  "truth": {
+    "energy_kcal": 515.0,
+    "energy_kj": 2158.0,
+    "fat_g": 24.8,
+    "saturated_fat_g": 11.5,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 64.0,
+    "sugars_g": 35.8,
+    "polyols_g": null,
+    "starch_g": 0.0,
+    "fiber_g": null,
+    "protein_g": 7.9,
+    "salt_g": 0.559,
+    "sodium_g": 0.2236
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "26_en_5449000000996",
+  "code": "5449000000996",
+  "product_name": "Coca-Cola",
+  "brands": "COCA-COLA SERVICES SA/NV, Coca-Cola",
+  "country": "united-kingdom",
+  "lang": "en",
+  "quantity": "330 ml",
+  "serving_size": "1 portion (330 ml)",
+  "off_url": "https://world.openfoodfacts.org/product/5449000000996",
+  "image_url": "https://images.openfoodfacts.org/images/products/544/900/000/0996/nutrition_en.940.full.jpg",
+  "original_size": [
+    767,
+    904
+  ],
+  "stored_size": [
+    767,
+    904
+  ],
+  "license": "Open Food Facts contributors, ODbL / CC BY-SA 3.0",
+  "truth": {
+    "energy_kcal": 42.0,
+    "energy_kj": 180.0,
+    "fat_g": 0.0,
+    "saturated_fat_g": 0.0,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 10.6,
+    "sugars_g": 10.6,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": null,
+    "protein_g": 0.0,
+    "salt_g": 0.0,
+    "sodium_g": 0.0
+  }
+}

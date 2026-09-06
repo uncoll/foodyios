@@ -1,0 +1,37 @@
+{
+  "id": "25_es_8480000160164",
+  "code": "8480000160164",
+  "product_name": "Tomate triturado",
+  "brands": "Hacendado",
+  "country": "spain",
+  "lang": "es",
+  "quantity": "400 g, 425 ml",
+  "serving_size": null,
+  "off_url": "https://world.openfoodfacts.org/product/8480000160164",
+  "image_url": "https://images.openfoodfacts.org/images/products/848/000/016/0164/nutrition_es.21.full.jpg",
+  "original_size": [
+    1338,
+    816
+  ],
+  "stored_size": [
+    1338,
+    816
+  ],
+  "license": "Open Food Facts contributors, ODbL / CC BY-SA 3.0",
+  "truth": {
+    "energy_kcal": 29.0,
+    "energy_kj": 115.9,
+    "fat_g": 0.1,
+    "saturated_fat_g": 0.0,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 5.8,
+    "sugars_g": 4.7,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": null,
+    "protein_g": 0.8,
+    "salt_g": 0.5,
+    "sodium_g": 0.2
+  }
+}

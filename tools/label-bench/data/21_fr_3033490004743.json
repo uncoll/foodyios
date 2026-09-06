@@ -1,0 +1,37 @@
+{
+  "id": "21_fr_3033490004743",
+  "code": "3033490004743",
+  "product_name": "Skyr",
+  "brands": "Danone",
+  "country": "france",
+  "lang": "fr",
+  "quantity": "140 g",
+  "serving_size": "1 serving (140 g)",
+  "off_url": "https://world.openfoodfacts.org/product/3033490004743",
+  "image_url": "https://images.openfoodfacts.org/images/products/303/349/000/4743/nutrition_fr.65.full.jpg",
+  "original_size": [
+    2208,
+    1583
+  ],
+  "stored_size": [
+    1600,
+    1147
+  ],
+  "license": "Open Food Facts contributors, ODbL / CC BY-SA 3.0",
+  "truth": {
+    "energy_kcal": 57.1428571428571,
+    "energy_kj": 244.0,
+    "fat_g": 0.2,
+    "saturated_fat_g": 0.1,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 3.9,
+    "sugars_g": 3.9,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": null,
+    "protein_g": 10.0,
+    "salt_g": 0.09,
+    "sodium_g": 0.036
+  }
+}

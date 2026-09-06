@@ -1,0 +1,37 @@
+{
+  "id": "28_pl_5901234123457",
+  "code": "5901234123457",
+  "product_name": "Sauce chiltepin",
+  "brands": "La lumbre",
+  "country": "poland",
+  "lang": "pl",
+  "quantity": "190 ml",
+  "serving_size": "1 serving (100 g)",
+  "off_url": "https://world.openfoodfacts.org/product/5901234123457",
+  "image_url": "https://images.openfoodfacts.org/images/products/590/123/412/3457/nutrition_es.91.full.jpg",
+  "original_size": [
+    1280,
+    1444
+  ],
+  "stored_size": [
+    1280,
+    1444
+  ],
+  "license": "Open Food Facts contributors, ODbL / CC BY-SA 3.0",
+  "truth": {
+    "energy_kcal": 197.0,
+    "energy_kj": 815.6,
+    "fat_g": 18.0,
+    "saturated_fat_g": 12.0,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 6.0,
+    "sugars_g": 4.2,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": null,
+    "protein_g": 2.8,
+    "salt_g": 2.1,
+    "sodium_g": 0.84
+  }
+}

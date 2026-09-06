@@ -1,0 +1,37 @@
+{
+  "id": "19_fr_3175680011480",
+  "code": "3175680011480",
+  "product_name": "Sésame",
+  "brands": "Gerblé",
+  "country": "france",
+  "lang": "fr",
+  "quantity": "230 g",
+  "serving_size": "1 biscuit (10 g)",
+  "off_url": "https://world.openfoodfacts.org/product/3175680011480",
+  "image_url": "https://images.openfoodfacts.org/images/products/317/568/001/1480/nutrition_fr.248.full.jpg",
+  "original_size": [
+    2925,
+    836
+  ],
+  "stored_size": [
+    1600,
+    457
+  ],
+  "license": "Open Food Facts contributors, ODbL / CC BY-SA 3.0",
+  "truth": {
+    "energy_kcal": 467.0,
+    "energy_kj": 1961.0,
+    "fat_g": 18.0,
+    "saturated_fat_g": 2.0,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 64.0,
+    "sugars_g": 17.0,
+    "polyols_g": null,
+    "starch_g": null,
+    "fiber_g": 4.6,
+    "protein_g": 10.0,
+    "salt_g": 0.38,
+    "sodium_g": 0.152
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "23_it_8076800195057",
+  "code": "8076800195057",
+  "product_name": "Spaghetti Nº5",
+  "brands": "Barilla",
+  "country": "italy",
+  "lang": "it",
+  "quantity": "500 g",
+  "serving_size": "1 serving (85 g)",
+  "off_url": "https://world.openfoodfacts.org/product/8076800195057",
+  "image_url": "https://images.openfoodfacts.org/images/products/807/680/019/5057/nutrition_it.3618.full.jpg",
+  "original_size": [
+    1206,
+    563
+  ],
+  "stored_size": [
+    1206,
+    563
+  ],
+  "license": "Open Food Facts contributors, ODbL / CC BY-SA 3.0",
+  "truth": {
+    "energy_kcal": 359.0,
+    "energy_kj": 1521.0,
+    "fat_g": 2.0,
+    "saturated_fat_g": 0.5,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 71.0,
+    "sugars_g": 3.5,
+    "polyols_g": null,
+    "starch_g": 0.0,
+    "fiber_g": 3.0,
+    "protein_g": 13.0,
+    "salt_g": 0.01,
+    "sodium_g": 0.004
+  }
+}

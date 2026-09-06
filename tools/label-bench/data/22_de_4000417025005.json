@@ -1,0 +1,37 @@
+{
+  "id": "22_de_4000417025005",
+  "code": "4000417025005",
+  "product_name": "Ritter Sport Marzapane chocolate",
+  "brands": "RITTER SPORT",
+  "country": "germany",
+  "lang": "de",
+  "quantity": "100g",
+  "serving_size": "1 Cube (6.52 g)",
+  "off_url": "https://world.openfoodfacts.org/product/4000417025005",
+  "image_url": "https://images.openfoodfacts.org/images/products/400/041/702/5005/nutrition_de.91.full.jpg",
+  "original_size": [
+    1470,
+    562
+  ],
+  "stored_size": [
+    1470,
+    562
+  ],
+  "license": "Open Food Facts contributors, ODbL / CC BY-SA 3.0",
+  "truth": {
+    "energy_kcal": 496.0,
+    "energy_kj": 2069.0,
+    "fat_g": 27.0,
+    "saturated_fat_g": 11.0,
+    "monounsaturated_fat_g": null,
+    "polyunsaturated_fat_g": null,
+    "carbohydrates_g": 52.0,
+    "sugars_g": 51.0,
+    "polyols_g": null,
+    "starch_g": 0.0,
+    "fiber_g": 6.2,
+    "protein_g": 7.0,
+    "salt_g": 1.0,
+    "sodium_g": 0.4
+  }
+}
