@@ -58,14 +58,8 @@ def main():
         print(f"+ {r['id']} {orig} -> {img.size}")
     manifest.sort(key=lambda m: m["id"])
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2))
-    lines = ["# Источники изображений", "",
-             "Синтетические этикетки (`s*`) сгенерированы скриптами `synth/` — HTML-таблица, отрисованная Chromium, "
-             "с фотодеградацией (перспектива, поворот, цилиндр, блики, шум, JPEG). Лицензия: CC0.", "",
-             "Реальные фото (`r*`) взяты из публичных GitHub-репозиториев:", ""]
-    lines += [f"- `{r['id']}` — {r['product']} — {r['source']}" for r in REAL]
-    lines += ["", "Записи из Open Food Facts (`NN_xx_<barcode>`, если есть) добавляются workflow `label-bench.yml`: "
-              "фото участников OFF, CC BY-SA 3.0, данные ODbL."]
-    (DATA / "ATTRIBUTION.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    from fetch_dataset import write_attribution
+    write_attribution(manifest)
     print(f"manifest: {len(manifest)}")
 
 

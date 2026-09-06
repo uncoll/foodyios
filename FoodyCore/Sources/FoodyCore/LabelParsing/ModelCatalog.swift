@@ -36,12 +36,12 @@ public struct ModelOption: Identifiable, Equatable, Hashable, Sendable {
 /// Каталог поддерживаемых моделей (см. docs/model-analysis.md — результаты бенчмарка).
 public enum ModelCatalog {
     public static let openAI: [ModelOption] = [
-        ModelOption(provider: .openAI, modelID: "gpt-5.6-luna", title: "GPT-5.6 Luna", inputPrice: 1.0, outputPrice: 6.0,
-                    note: "Быстрая и недорогая модель семейства GPT-5.6"),
-        ModelOption(provider: .openAI, modelID: "gpt-5.6-terra", title: "GPT-5.6 Terra", inputPrice: 2.5, outputPrice: 15.0,
+        ModelOption(provider: .openAI, modelID: "gpt-5.6-luna", title: "GPT-5.6 Luna", inputPrice: 0.2, outputPrice: 1.2,
+                    note: "Самая дешёвая модель со зрением у OpenAI"),
+        ModelOption(provider: .openAI, modelID: "gpt-5.6-terra", title: "GPT-5.6 Terra", inputPrice: 2.0, outputPrice: 12.0,
                     note: "Средний уровень GPT-5.6"),
-        ModelOption(provider: .openAI, modelID: "gpt-5.6-sol", title: "GPT-5.6 Sol", inputPrice: 5.0, outputPrice: 30.0,
-                    note: "Флагман OpenAI, лучшее зрение"),
+        ModelOption(provider: .openAI, modelID: "gpt-5.6-sol", title: "GPT-5.6 Sol", inputPrice: 4.0, outputPrice: 20.0,
+                    note: "Флагман OpenAI, лучшее зрение (промо-цена до 21.11.2026)"),
         ModelOption(provider: .openAI, modelID: "gpt-5-mini", title: "GPT-5 mini", inputPrice: 0.25, outputPrice: 2.0,
                     note: "Дешёвая reasoning-модель"),
         ModelOption(provider: .openAI, modelID: "gpt-4.1-mini", title: "GPT-4.1 mini", inputPrice: 0.4, outputPrice: 1.6,
