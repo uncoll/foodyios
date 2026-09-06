@@ -1,5 +1,143 @@
 {
   "anthropic-agent/claude-fable-5-1": {
+    "19_fr_3175680011480": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Table split in two blocks (macros left, salt + vitamins/minerals right). Per-100 g and per-biscuit (11,5 g) columns present; per-100 g used. Vitamine PP = niacin. % AQR columns ignored. No product name or brand visible.",
+      "latency_s": null
+    },
+    "20_fr_3229820129488": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Two columns: 'Pour 100 g' and a per-portion column whose header is cut off at the top (only '... de céréales' visible), so the portion size is not readable; per-100 g column used. Photo slightly blurry but digits legible. No product name or brand visible.",
+      "latency_s": null
+    },
+    "21_fr_3033490004743": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Columns: 'Pour 100 g', 'Pour 1 pot 140 g', '% AR 140 g'; per-100 g column used, % AR ignored. Calcium printed as '110 (13)' = 110 mg (13 % AR). No fibre row printed. No product name or brand visible.",
+      "latency_s": null
+    },
+    "22_de_4000417025005": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Single column 'Durchschnittliche Nährwerte je 100 g'. No fibre row and no portion information printed. No product name or brand visible.",
+      "latency_s": null
+    },
+    "24_it_8000500310427": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Columns: 'per 100 g', 'per pezzo (13,8 g)', '(%*) per 13,8 g'; per-100 g column used, % column ignored. No fibre row printed. Brand taken from the manufacturer line 'Ferrero Commerciale Italia S.r.l.'; no product name visible (only a partially cut-off legal description 'Biscotti con farcitura di crema alle nocciole...').",
+      "latency_s": null
+    },
+    "25_es_8480000160164": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Single column 'INFORMACIÓN NUTRICIONAL POR 100g'. Label printed on a curved can, so values are offset from row labels but rows are unambiguous. No fibre row and no portion information printed. Brand taken from the manufacturer line 'Fabricado por: EL CIDACOS S.A.'; no product name visible.",
+      "latency_s": null
+    },
+    "26_en_5449000000996": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "Columns: 'Per 100ml', '330ml' and '(%*)' reference intake; per-100 ml column used, % ignored. Serving taken from the 330ml column / can size. No fibre row printed. Photo slightly soft but all digits legible.",
+      "latency_s": null
+    },
+    "27_en_5000159484695": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "Multilingual table with columns '/100ml' and '/43.1ml (%*)'; per-100 ml column used, % values ignored. Portion size printed as 43.1ml, 6 portions per pack. No fibre row printed. No product name or brand visible.",
+      "latency_s": null
+    },
     "r01_en_cookies": {
       "verdicts": {
         "energy_kcal": "correct",
@@ -301,6 +439,144 @@
     }
   },
   "anthropic-agent/claude-haiku-4-5": {
+    "19_fr_3175680011480": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "20_fr_3229820129488": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "21_fr_3033490004743": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "22_de_4000417025005": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "24_it_8000500310427": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "25_es_8480000160164": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "wrong: got 0.09 want 0.0",
+        "carbohydrates_g": "wrong: got 5.89 want 5.8",
+        "sugars_g": "correct",
+        "protein_g": "wrong: got 0.89 want 0.8",
+        "salt_g": "wrong: got 0.59 want 0.5"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": null,
+      "latency_s": null
+    },
+    "26_en_5449000000996": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": null,
+      "latency_s": null
+    },
+    "27_en_5000159484695": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": null,
+      "latency_s": null
+    },
     "r01_en_cookies": {
       "verdicts": {
         "energy_kcal": "correct",
@@ -604,6 +880,144 @@
     }
   },
   "anthropic-agent/claude-opus-5": {
+    "19_fr_3175680011480": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Two-part table (ANALYSE MOYENNE); used the 'Teneur pour 100 g' column, ignored % AQR and per-biscuit (11.5 g) columns. Vitamine PP = niacin.",
+      "latency_s": null
+    },
+    "20_fr_3229820129488": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "medium",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Used the 'Pour 100 g' column. A second column ('... de cereales') is present but its header with the portion size is cut off at the top, so serving size is unknown. Photo slightly blurry.",
+      "latency_s": null
+    },
+    "21_fr_3033490004743": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Used the 'Pour 100 g' column; per-pot (140 g) and % AR columns ignored. No fibre row printed. Calcium row prints 110 mg (13 % AR).",
+      "latency_s": null
+    },
+    "22_de_4000417025005": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Single column 'Durchschnittliche Naehrwerte je 100 g'. No fibre row and no serving size printed.",
+      "latency_s": null
+    },
+    "24_it_8000500310427": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Used the 'per 100 g' column; per-pezzo (13,8 g) and (%*) columns ignored. No fibre row printed. Brand taken from the manufacturer line 'Ferrero Commerciale Italia S.r.l.'; the product denomination at the top ('Biscotti con farcitura di crema alle nocciole...') is cut off at the right edge.",
+      "latency_s": null
+    },
+    "25_es_8480000160164": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Single column 'INFORMACION NUTRICIONAL POR 100g'. Curved jar surface makes labels and values look vertically offset; rows matched in printed order. No fibre row, no serving size. Manufacturer line reads 'EL CIDACOS S.A.' (no brand shown).",
+      "latency_s": null
+    },
+    "26_en_5449000000996": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "Used the 'Per 100ml' column; the 330ml can column and % reference intake ignored. No fibre row printed.",
+      "latency_s": null
+    },
+    "27_en_5000159484695": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "Multilingual label (nl/fr/de/ro/fi/sv/da). Used the '/100ml' column; the 43.1ml portion column with (%*) ignored. 6 portions per pack; portion size 43.1ml. Basis is printed per 100ml even though the product is a solid-type bar. No fibre row printed.",
+      "latency_s": null
+    },
     "r01_en_cookies": {
       "verdicts": {
         "energy_kcal": "correct",
@@ -905,6 +1319,144 @@
     }
   },
   "anthropic-agent/claude-sonnet-5": {
+    "19_fr_3175680011480": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Vitamine PP labelled as niacin; Vitamine B9 labelled as folate. % AQR (reference intake) columns ignored per instructions. Product name/brand not visible in this cropped nutrition-table image.",
+      "latency_s": null
+    },
+    "20_fr_3229820129488": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "fiber_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "medium",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Image is slightly blurry and cropped: the second column header ('de céréale[s]') is cut off at the top so its serving size in grams is not visible, and the table may continue below the last visible row (Sel). No vitamin/mineral rows visible in this crop.",
+      "latency_s": null
+    },
+    "21_fr_3033490004743": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Fibre row not printed on this label. %AR (reference intake) columns ignored per instructions. Product name/brand not visible in this cropped nutrition-table image.",
+      "latency_s": null
+    },
+    "22_de_4000417025005": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Only a single per-100g column is printed (no per-serving column, no serving size stated). Fibre and micronutrient rows not printed. Product name/brand not visible in this cropped nutrition-table image.",
+      "latency_s": null
+    },
+    "24_it_8000500310427": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Product name text at top of package is cut off/truncated in the photo so it was left null; manufacturer 'Ferrero Commerciale Italia S.r.l.' is printed and used as brand. Fibre and micronutrient rows not printed. (%*) reference-intake column ignored per instructions.",
+      "latency_s": null
+    },
+    "25_es_8480000160164": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100g",
+      "notes": "Only a single per-100g column is printed; no serving size stated in this crop. Product name not visible (top of image shows only storage instructions). Manufacturer text 'Fabricado por: EL CIDACOS S.A.' is partially cut off at the bottom edge of the photo. Fibre and micronutrient rows not printed.",
+      "latency_s": null
+    },
+    "26_en_5449000000996": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "Can text reads 'Coke' as the brand wordmark with 'Original Taste' as the product descriptor. Table gives per 100ml and per 330ml (whole can) columns plus a (%*) reference-intake column, which was ignored. Fibre and micronutrient rows not printed.",
+      "latency_s": null
+    },
+    "27_en_5000159484695": {
+      "verdicts": {
+        "energy_kcal": "correct",
+        "energy_kj": "correct",
+        "fat_g": "correct",
+        "saturated_fat_g": "correct",
+        "carbohydrates_g": "correct",
+        "sugars_g": "correct",
+        "protein_g": "correct",
+        "salt_g": "correct"
+      },
+      "confidence": "high",
+      "values_source": "per_100_column",
+      "basis": "per_100ml",
+      "notes": "Label is multilingual (Dutch/French/German/Romanian/Finnish/Swedish/Danish); values are identical across languages, only the /100ml column used, (%*) reference-intake column ignored. Product name/brand not visible in this cropped nutrition-table image. Fibre and micronutrient rows not printed.",
+      "latency_s": null
+    },
     "r01_en_cookies": {
       "verdicts": {
         "energy_kcal": "correct",

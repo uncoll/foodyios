@@ -1,0 +1,12 @@
+{
+  "_comment": "Ручная сверка эталона Open Food Facts с фото (см. docs/model-analysis.md). absent = строки нет на этикетке; exclude = этикетка неоднозначна или эталон OFF относится к другому продукту.",
+  "exclude": ["23_it_8076800195057", "28_pl_5901234123457"],
+  "images": {
+    "21_fr_3033490004743": {"truth": {"energy_kcal": 57, "fiber_g": "absent"}, "note": "OFF хранит 57,14 (пересчёт); на этикетке 57 kcal; клетчатки нет"},
+    "22_de_4000417025005": {"truth": {"fiber_g": "absent", "salt_g": 0.01}, "note": "OFF: клетчатка 6,2 и соль 1,0 — на этикетке клетчатки нет, соль 0,01 г"},
+    "24_it_8000500310427": {"truth": {"fiber_g": "absent"}, "note": "клетчатка не указана"},
+    "25_es_8480000160164": {"truth": {"energy_kj": 122, "fiber_g": "absent"}, "note": "OFF: 115,9 кДж (пересчёт); на этикетке 122 kJ"},
+    "26_en_5449000000996": {"truth": {"fiber_g": "absent"}, "note": "на 100 мл"},
+    "27_en_5000159484695": {"truth": {"energy_kcal": 286, "energy_kj": 1199, "fat_g": 14, "saturated_fat_g": 8.9, "carbohydrates_g": 36, "sugars_g": 29, "fiber_g": "absent", "protein_g": 2.7, "salt_g": 0.26}, "note": "OFF-значения пересчитаны из другой основы; на этикетке значения на 100 мл"}
+  }
+}
